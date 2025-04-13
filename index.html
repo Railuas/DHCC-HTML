@@ -5,14 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diligent Hands Abike Montessori Academy | St. Kitts</title>
     <style>
-        /* Color Scheme */
+        /* Modern Montessori Color Scheme */
         :root {
-            --purple: #6a0dad;
-            --light-purple: #9c70d6;
-            --yellow: #ffd700;
-            --light-yellow: #fff3b0;
-            --white: #ffffff;
-            --gray: #f5f5f5;
+            /* Primary Colors */
+            --primary: #5E4FA2;  /* Sophisticated Montessori purple */
+            --primary-light: #8D7BC8;
+            --primary-dark: #3A2C6E;
+            
+            /* Secondary Colors */
+            --secondary: #F9C80E;  /* Warm gold */
+            --secondary-light: #FFE082;
+            --secondary-dark: #F9A825;
+            
+            /* Nature Accents */
+            --nature-green: #81C784;
+            --nature-blue: #4FC3F7;
+            
+            /* Neutrals */
+            --white: #FFFDFA;
+            --light-gray: #F5F3F7;
+            --medium-gray: #D1C4E9;
             --dark-gray: #333333;
         }
         
@@ -21,7 +33,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+            font-family: 'Nunito Sans', 'Open Sans', sans-serif;
         }
         
         body {
@@ -42,18 +54,33 @@
         }
         
         h1, h2, h3, h4 {
-            color: var(--purple);
+            color: var(--primary);
             margin-bottom: 1rem;
+            font-weight: 700;
         }
         
         h1 {
             font-size: 2.5rem;
+            line-height: 1.2;
         }
         
         h2 {
             font-size: 2rem;
             text-align: center;
             margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary);
         }
         
         h3 {
@@ -62,6 +89,8 @@
         
         p {
             margin-bottom: 1rem;
+            color: #555;
+            line-height: 1.7;
         }
         
         ul {
@@ -72,36 +101,37 @@
         /* Button Styles */
         .btn {
             display: inline-block;
-            background-color: var(--yellow);
-            color: var(--purple);
-            padding: 0.8rem 1.5rem;
-            border-radius: 50px;
+            background-color: var(--secondary);
+            color: var(--primary-dark);
+            padding: 12px 24px;
+            border-radius: 25px;
             text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
+            font-weight: 600;
+            transition: all 0.3s ease;
             border: none;
             cursor: pointer;
             box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            font-size: 1rem;
         }
         
         .btn:hover {
-            background-color: var(--light-yellow);
+            background-color: var(--secondary-light);
             transform: translateY(-3px);
-            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
-        .btn-purple {
-            background-color: var(--purple);
+        .btn-primary {
+            background-color: var(--primary);
             color: white;
         }
         
-        .btn-purple:hover {
-            background-color: var(--light-purple);
+        .btn-primary:hover {
+            background-color: var(--primary-light);
         }
         
         /* Header Styles */
         header {
-            background-color: var(--purple);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
             padding: 1rem 0;
             position: sticky;
@@ -124,17 +154,20 @@
         
         .logo-img {
             height: 60px;
-            margin-right: 10px;
+            margin-right: 15px;
+            border-radius: 50%;
+            border: 2px solid var(--secondary);
         }
         
         .logo-text {
             color: white;
             font-size: 1.5rem;
-            font-weight: bold;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
         
         .logo-text span {
-            color: var(--yellow);
+            color: var(--secondary);
         }
         
         nav ul {
@@ -149,14 +182,24 @@
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             transition: color 0.3s;
             padding: 0.5rem 0;
+            position: relative;
         }
         
         nav ul li a:hover {
-            color: var(--yellow);
-            border-bottom: 2px solid var(--yellow);
+            color: var(--secondary);
+        }
+        
+        nav ul li a:hover:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--secondary);
         }
         
         /* Mobile Menu */
@@ -169,7 +212,7 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(106, 13, 173, 0.7), rgba(106, 13, 173, 0.7)), 
+            background: linear-gradient(rgba(94, 79, 162, 0.85), 
                         url('https://images.unsplash.com/photo-1604881991720-f91add269bed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
@@ -189,7 +232,7 @@
             color: white;
             font-size: 3rem;
             margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
         }
         
         .hero p {
@@ -200,7 +243,7 @@
         
         /* Age Groups Section */
         .age-groups {
-            background-color: var(--gray);
+            background-color: var(--light-gray);
             padding: 4rem 0;
         }
         
@@ -212,27 +255,39 @@
         }
         
         .age-card {
-            background-color: white;
-            border-radius: 10px;
+            background-color: var(--white);
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
             text-align: center;
             padding: 2rem;
-            border-top: 5px solid var(--purple);
+            border-top: 4px solid var(--secondary);
         }
         
         .age-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         
         .age-icon {
-            font-size: 3rem;
-            color: var(--purple);
-            margin-bottom: 1rem;
+            color: var(--primary);
+            background: var(--secondary-light);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 1.5rem;
         }
         
         /* Programs Section */
+        .programs {
+            padding: 4rem 0;
+        }
+        
         .programs-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -241,15 +296,16 @@
         }
         
         .program-card {
-            background-color: white;
-            border-radius: 10px;
+            background-color: var(--white);
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
         }
         
         .program-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         
         .program-img {
@@ -264,13 +320,17 @@
         
         /* Testimonials */
         .testimonials {
-            background-color: var(--purple);
+            background-color: var(--primary);
             color: white;
             padding: 4rem 0;
         }
         
         .testimonials h2 {
             color: white;
+        }
+        
+        .testimonials h2:after {
+            background: var(--secondary);
         }
         
         .testimonial-grid {
@@ -283,21 +343,23 @@
             background-color: rgba(255,255,255,0.1);
             padding: 1.5rem;
             border-radius: 10px;
+            border-left: 3px solid var(--secondary);
         }
         
         .testimonial-text {
             font-style: italic;
             margin-bottom: 1rem;
+            color: white;
         }
         
         .testimonial-author {
             font-weight: bold;
-            color: var(--yellow);
+            color: var(--secondary);
         }
         
         /* Curriculum Section */
         .curriculum {
-            background-color: var(--gray);
+            background-color: var(--light-gray);
         }
         
         .curriculum-grid {
@@ -307,11 +369,18 @@
         }
         
         .curriculum-card {
-            background-color: white;
+            background-color: var(--white);
             padding: 1.5rem;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-left: 5px solid var(--yellow);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--secondary);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .curriculum-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         
         /* Contact Section */
@@ -322,14 +391,14 @@
         }
         
         .contact-info {
-            background-color: var(--purple);
+            background-color: var(--primary);
             color: white;
             padding: 2rem;
             border-radius: 10px;
         }
         
         .contact-info h3 {
-            color: var(--yellow);
+            color: var(--secondary);
             margin-bottom: 1.5rem;
         }
         
@@ -337,18 +406,19 @@
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
+            color: white;
         }
         
         .contact-info i {
             margin-right: 1rem;
-            color: var(--yellow);
+            color: var(--secondary);
         }
         
         .contact-form {
-            background-color: white;
+            background-color: var(--white);
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         
         .form-group {
@@ -358,7 +428,8 @@
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
-            font-weight: 500;
+            font-weight: 600;
+            color: var(--primary);
         }
         
         .form-group input,
@@ -366,9 +437,17 @@
         .form-group select {
             width: 100%;
             padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            border: 1px solid var(--medium-gray);
+            border-radius: 6px;
             font-size: 1rem;
+            transition: border 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
         }
         
         .form-group textarea {
@@ -378,7 +457,7 @@
         
         /* Footer */
         footer {
-            background-color: var(--dark-gray);
+            background-color: var(--primary-dark);
             color: white;
             padding: 3rem 0 1rem;
         }
@@ -391,12 +470,25 @@
         }
         
         .footer-column h3 {
-            color: var(--yellow);
+            color: var(--secondary);
             margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary);
         }
         
         .footer-column ul {
             list-style: none;
+            padding-left: 0;
         }
         
         .footer-column ul li {
@@ -410,7 +502,7 @@
         }
         
         .footer-column ul li a:hover {
-            color: white;
+            color: var(--secondary);
         }
         
         .social-links {
@@ -426,7 +518,7 @@
         }
         
         .social-links a:hover {
-            color: var(--yellow);
+            color: var(--secondary);
         }
         
         .newsletter {
@@ -436,7 +528,7 @@
         .newsletter input {
             padding: 0.8rem;
             border: none;
-            border-radius: 4px;
+            border-radius: 6px;
             width: 70%;
             margin-right: 0.5rem;
         }
@@ -444,7 +536,7 @@
         .copyright {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid #444;
+            border-top: 1px solid rgba(255,255,255,0.1);
             color: #aaa;
             font-size: 0.9rem;
         }
@@ -476,10 +568,10 @@
         }
         
         .feature-card {
-            background-color: var(--gray);
+            background-color: var(--light-gray);
             padding: 1.5rem;
             border-radius: 10px;
-            border-left: 5px solid var(--purple);
+            border-left: 4px solid var(--primary);
         }
         
         .materials-grid {
@@ -492,6 +584,15 @@
         .material-card {
             text-align: center;
             padding: 1rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .material-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         
         .material-card img {
@@ -512,7 +613,7 @@
         }
         
         .curriculum-hero {
-            background: linear-gradient(rgba(106, 13, 173, 0.7), rgba(106, 13, 173, 0.7)), 
+            background: linear-gradient(rgba(94, 79, 162, 0.85), 
                         url('https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
@@ -558,7 +659,7 @@
                 left: -100%;
                 width: 80%;
                 height: calc(100vh - 80px);
-                background-color: var(--purple);
+                background-color: var(--primary-dark);
                 transition: left 0.3s;
                 padding: 2rem;
             }
@@ -595,7 +696,7 @@
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
@@ -630,7 +731,7 @@
                     <div class="hero-content">
                         <h1>Love Never Fails!</h1>
                         <p>Diligent Hands Abike Montessori Academy - Where academic excellence is pursued in a loving environment</p>
-                        <a href="#programs" class="btn btn-purple" onclick="showProgramsSection(event)">Explore Our Programs</a>
+                        <a href="#programs" class="btn btn-primary" onclick="showProgramsSection(event)">Explore Our Programs</a>
                     </div>
                 </div>
             </section>
@@ -669,39 +770,41 @@
             </section>
 
             <!-- Programs Section -->
-            <section id="programs" class="container">
-                <h2>Our Montessori Programs</h2>
-                <div class="programs-grid">
-                    <div class="program-card">
-                        <img src="https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Toddler Program" class="program-img">
-                        <div class="program-content">
-                            <h3>Toddler Program</h3>
-                            <p>For children 18 months to 3 years old. Our toddler program focuses on developing independence, language skills, and motor coordination in a nurturing environment.</p>
-                            <a href="#" class="btn" onclick="showToddlerProgram(event)">Learn More</a>
+            <section id="programs" class="programs">
+                <div class="container">
+                    <h2>Our Montessori Programs</h2>
+                    <div class="programs-grid">
+                        <div class="program-card">
+                            <img src="https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Toddler Program" class="program-img">
+                            <div class="program-content">
+                                <h3>Toddler Program</h3>
+                                <p>For children 18 months to 3 years old. Our toddler program focuses on developing independence, language skills, and motor coordination in a nurturing environment.</p>
+                                <a href="#" class="btn" onclick="showToddlerProgram(event)">Learn More</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="program-card">
-                        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Early Childhood Program" class="program-img">
-                        <div class="program-content">
-                            <h3>Early Childhood/Kindergarten</h3>
-                            <p>For children 3-6 years old. This program prepares children for elementary school with a focus on practical life skills, sensorial exploration, and early academics.</p>
-                            <a href="#" class="btn" onclick="showEarlyChildhoodProgram(event)">Learn More</a>
+                        <div class="program-card">
+                            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Early Childhood Program" class="program-img">
+                            <div class="program-content">
+                                <h3>Early Childhood/Kindergarten</h3>
+                                <p>For children 3-6 years old. This program prepares children for elementary school with a focus on practical life skills, sensorial exploration, and early academics.</p>
+                                <a href="#" class="btn" onclick="showEarlyChildhoodProgram(event)">Learn More</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="program-card">
-                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Elementary Program" class="program-img">
-                        <div class="program-content">
-                            <h3>Elementary Program</h3>
-                            <p>For Grades 1-3. Our lower elementary program builds on Montessori foundations with advanced practical life, mathematics, language arts, and cultural studies.</p>
-                            <a href="#" class="btn" onclick="showElementaryProgram(event)">Learn More</a>
+                        <div class="program-card">
+                            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Elementary Program" class="program-img">
+                            <div class="program-content">
+                                <h3>Elementary Program</h3>
+                                <p>For Grades 1-3. Our lower elementary program builds on Montessori foundations with advanced practical life, mathematics, language arts, and cultural studies.</p>
+                                <a href="#" class="btn" onclick="showElementaryProgram(event)">Learn More</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="program-card">
-                        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Camp Program" class="program-img">
-                        <div class="program-content">
-                            <h3>Camp Programs</h3>
-                            <p>We offer Christmas, Easter and Summer camps for children in St. Kitts with the same love and attention as our regular programs.</p>
-                            <a href="#" class="btn" onclick="showCampProgram(event)">Learn More</a>
+                        <div class="program-card">
+                            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Camp Program" class="program-img">
+                            <div class="program-content">
+                                <h3>Camp Programs</h3>
+                                <p>We offer Christmas, Easter and Summer camps for children in St. Kitts with the same love and attention as our regular programs.</p>
+                                <a href="#" class="btn" onclick="showCampProgram(event)">Learn More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -716,7 +819,7 @@
                         <p class="testimonial-author">- Abike Joseph, School Principal</p>
                     </div>
                     <div style="text-align: center; margin-top: 2rem;">
-                        <blockquote style="font-size: 1.2rem; color: var(--yellow); font-style: italic;">
+                        <blockquote style="font-size: 1.2rem; color: var(--secondary); font-style: italic;">
                             "TO PROVIDE AND MAINTAIN AN ENVIRONMENT WHERE CHILDREN CAN FEEL LOVED, LEARNING IS FUN AND ACADEMIC EXCELLENCE IS PURSUED"
                         </blockquote>
                     </div>
@@ -729,32 +832,32 @@
                     <h2>Our Montessori Curriculum</h2>
                     <div class="curriculum-grid">
                         <div class="curriculum-card" onclick="showPracticalLifeCurriculum(event)">
-                            <h3><i class="fas fa-hand-holding-heart" style="color: var(--purple);"></i> Practical Life</h3>
+                            <h3><i class="fas fa-hand-holding-heart" style="color: var(--primary);"></i> Practical Life</h3>
                             <p>These are the first exercises introduced to the children. They create the foundation upon which all other work in the classroom depends.</p>
                             <a href="#" class="btn" style="margin-top: 1rem;">Learn More</a>
                         </div>
                         <div class="curriculum-card" onclick="showCulturalScienceCurriculum(event)">
-                            <h3><i class="fas fa-globe-americas" style="color: var(--purple);"></i> Cultural & Science</h3>
+                            <h3><i class="fas fa-globe-americas" style="color: var(--primary);"></i> Cultural & Science</h3>
                             <p>These lessons allow the child to explore and discover their environment and the world as a whole.</p>
                             <a href="#" class="btn" style="margin-top: 1rem;">Learn More</a>
                         </div>
                         <div class="curriculum-card" onclick="showSensorialCurriculum(event)">
-                            <h3><i class="fas fa-hands" style="color: var(--purple);"></i> Sensorial</h3>
+                            <h3><i class="fas fa-hands" style="color: var(--primary);"></i> Sensorial</h3>
                             <p>These assist the child in organizing and simplifying the learning experience.</p>
                             <a href="#" class="btn" style="margin-top: 1rem;">Learn More</a>
                         </div>
                         <div class="curriculum-card" onclick="showMathematicsCurriculum(event)">
-                            <h3><i class="fas fa-calculator" style="color: var(--purple);"></i> Mathematics</h3>
+                            <h3><i class="fas fa-calculator" style="color: var(--primary);"></i> Mathematics</h3>
                             <p>In helping in the organization of the mathematical mind, the materials expose the world of numbers.</p>
                             <a href="#" class="btn" style="margin-top: 1rem;">Learn More</a>
                         </div>
                         <div class="curriculum-card" onclick="showLanguageCurriculum(event)">
-                            <h3><i class="fas fa-book-open" style="color: var(--purple);"></i> Language</h3>
+                            <h3><i class="fas fa-book-open" style="color: var(--primary);"></i> Language</h3>
                             <p>The Language materials encourage refinement and enrichment as the initial steps on the road to writing and reading.</p>
                             <a href="#" class="btn" style="margin-top: 1rem;">Learn More</a>
                         </div>
                         <div class="curriculum-card" onclick="showGracePeaceCurriculum(event)">
-                            <h3><i class="fas fa-peace" style="color: var(--purple);"></i> Grace and Peace</h3>
+                            <h3><i class="fas fa-peace" style="color: var(--primary);"></i> Grace and Peace</h3>
                             <p>Good manners and respect for others are essential qualities for a child to cultivate in the early years of life.</p>
                             <a href="#" class="btn" style="margin-top: 1rem;">Learn More</a>
                         </div>
@@ -774,7 +877,7 @@
                             <p><i class="fas fa-envelope"></i> diligenthandschildcare@gmail.com</p>
                             <p><i class="fas fa-clock"></i> Monday - Friday: 8:30am - 4pm</p>
                             <div style="margin-top: 2rem;">
-                                <a href="form.jotform.com/250647204519860" class="btn btn-purple" style="margin-right: 1rem;">Enroll Now</a>
+                                <a href="form.jotform.com/250647204519860" class="btn btn-primary" style="margin-right: 1rem;">Enroll Now</a>
                                 <a href="tel:8697656718" class="btn"><i class="fas fa-phone"></i> Call Us</a>
                             </div>
                         </div>
@@ -797,7 +900,7 @@
                                     <label for="message">Message *</label>
                                     <textarea id="message" name="message" required></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-purple">Send Message</button>
+                                <button type="submit" class="btn btn-primary">Send Message</button>
                             </form>
                         </div>
                     </div>
@@ -808,7 +911,7 @@
         <!-- Program Detail Pages -->
         <!-- Toddler Program -->
         <div id="toddler-program-page" class="program-detail-page">
-            <section class="program-hero" style="background: linear-gradient(rgba(106, 13, 173, 0.7), url('https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+            <section class="program-hero" style="background: linear-gradient(rgba(94, 79, 162, 0.85), url('https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                 <div class="container">
                     <h1>Toddler Program</h1>
                     <p>For children 18 months to 3 years</p>
@@ -881,7 +984,7 @@
                         </ul>
                         
                         <div style="text-align: center; margin-top: 3rem;">
-                            <a href="#contact" class="btn btn-purple" onclick="showContactSection(event)">Schedule a Visit</a>
+                            <a href="#contact" class="btn btn-primary" onclick="showContactSection(event)">Schedule a Visit</a>
                         </div>
                     </div>
                 </div>
@@ -890,7 +993,7 @@
 
         <!-- Early Childhood Program -->
         <div id="early-childhood-page" class="program-detail-page">
-            <section class="program-hero" style="background: linear-gradient(rgba(106, 13, 173, 0.7), url('https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+            <section class="program-hero" style="background: linear-gradient(rgba(94, 79, 162, 0.85), url('https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                 <div class="container">
                     <h1>Early Childhood Program</h1>
                     <p>For children 3-6 years</p>
@@ -960,7 +1063,7 @@
                         <p>The third year in our Early Childhood program is the crucial "kindergarten year" where children synthesize all they've learned in previous years. They emerge as classroom leaders, mentoring younger students while solidifying their academic foundation for elementary school.</p>
                         
                         <div style="text-align: center; margin-top: 3rem;">
-                            <a href="#contact" class="btn btn-purple" onclick="showContactSection(event)">Schedule a Visit</a>
+                            <a href="#contact" class="btn btn-primary" onclick="showContactSection(event)">Schedule a Visit</a>
                         </div>
                     </div>
                 </div>
@@ -969,7 +1072,7 @@
 
         <!-- Elementary Program -->
         <div id="elementary-program-page" class="program-detail-page">
-            <section class="program-hero" style="background: linear-gradient(rgba(106, 13, 173, 0.7), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+            <section class="program-hero" style="background: linear-gradient(rgba(94, 79, 162, 0.85), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                 <div class="container">
                     <h1>Elementary Program</h1>
                     <p>For Grades 1-3</p>
@@ -1042,7 +1145,7 @@
                         </ul>
                         
                         <div style="text-align: center; margin-top: 3rem;">
-                            <a href="#contact" class="btn btn-purple" onclick="showContactSection(event)">Schedule a Visit</a>
+                            <a href="#contact" class="btn btn-primary" onclick="showContactSection(event)">Schedule a Visit</a>
                         </div>
                     </div>
                 </div>
@@ -1051,7 +1154,7 @@
 
         <!-- Camp Program -->
         <div id="camp-program-page" class="program-detail-page">
-            <section class="program-hero" style="background: linear-gradient(rgba(106, 13, 173, 0.7), url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+            <section class="program-hero" style="background: linear-gradient(rgba(94, 79, 162, 0.85), url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                 <div class="container">
                     <h1>Camp Programs</h1>
                     <p>Seasonal fun with Montessori values</p>
@@ -1124,7 +1227,7 @@
                         </div>
                         
                         <div style="text-align: center; margin-top: 3rem;">
-                            <a href="#contact" class="btn btn-purple" onclick="showContactSection(event)">Inquire About Upcoming Camps</a>
+                            <a href="#contact" class="btn btn-primary" onclick="showContactSection(event)">Inquire About Upcoming Camps</a>
                         </div>
                     </div>
                 </div>
@@ -1134,7 +1237,7 @@
         <!-- Curriculum Detail Pages -->
         <!-- Practical Life Curriculum -->
         <div id="practical-life-curriculum-page" class="curriculum-detail-page">
-            <section class="curriculum-hero">
+            <section class="curriculum-hero" style="background: linear-gradient(rgba(94, 79, 162, 0.85), url('https://images.unsplash.com/photo-1596495577886-d920f1fb7238?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                 <div class="container">
                     <h1>Practical Life Curriculum</h1>
                     <p>The foundation of Montessori education</p>
@@ -1235,7 +1338,7 @@
 
         <!-- Cultural & Science Curriculum -->
         <div id="cultural-science-curriculum-page" class="curriculum-detail-page">
-            <section class="curriculum-hero" style="background: linear-gradient(rgba(106, 13, 173, 0.7), url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+            <section class="curriculum-hero" style="background: linear-gradient(rgba(94, 79, 162, 0.85), url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                 <div class="container">
                     <h1>Cultural & Science Curriculum</h1>
                     <p>Exploring our world and beyond</p>
@@ -1336,7 +1439,7 @@
 
         <!-- Sensorial Curriculum -->
         <div id="sensorial-curriculum-page" class="curriculum-detail-page">
-            <section class="curriculum-hero" style="background: linear-gradient(rgba(106, 13, 173, 0.7), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+            <section class="curriculum-hero" style="background: linear-gradient(rgba(94, 79, 162, 0.85), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                 <div class="container">
                     <h1>Sensorial Curriculum</h1>
                     <p>Refining the senses for learning</p>
@@ -1428,7 +1531,7 @@
 
         <!-- Mathematics Curriculum -->
         <div id="mathematics-curriculum-page" class="curriculum-detail-page">
-            <section class="curriculum-hero" style="background: linear-gradient(rgba(106, 13, 173, 0.7), url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+            <section class="curriculum-hero" style="background: linear-gradient(rgba(94, 79, 162, 0.85), url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                 <div class="container">
                     <h1>Mathematics Curriculum</h1>
                     <p>Concrete to abstract understanding</p>
@@ -1530,7 +1633,7 @@
 
         <!-- Language Curriculum -->
         <div id="language-curriculum-page" class="curriculum-detail-page">
-            <section class="curriculum-hero" style="background: linear-gradient(rgba(106, 13, 173, 0.7), url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+            <section class="curriculum-hero" style="background: linear-gradient(rgba(94, 79, 162, 0.85), url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                 <div class="container">
                     <h1>Language Curriculum</h1>
                     <p>From spoken word to written expression</p>
@@ -1631,7 +1734,7 @@
 
         <!-- Grace and Peace Curriculum -->
         <div id="grace-peace-curriculum-page" class="curriculum-detail-page">
-            <section class="curriculum-hero" style="background: linear-gradient(rgba(106, 13, 173, 0.7), url('https://images.unsplash.com/photo-1549056572-75914d5d5fd4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+            <section class="curriculum-hero" style="background: linear-gradient(rgba(94, 79, 162, 0.85), url('https://images.unsplash.com/photo-1549056572-75914d5d5fd4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                 <div class="container">
                     <h1>Grace & Peace Curriculum</h1>
                     <p>Nurturing kind and respectful individuals</p>
@@ -1765,6 +1868,7 @@
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
@@ -1772,7 +1876,7 @@
                     <p>Subscribe to our newsletter for updates and parenting tips!</p>
                     <div class="newsletter">
                         <input type="email" placeholder="Your email">
-                        <button class="btn btn-purple">Subscribe</button>
+                        <button class="btn btn-primary">Subscribe</button>
                     </div>
                 </div>
             </div>
