@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diligent Hands Abike Montessori Academy | St. Kitts</title>
+    <style>
+        /* Color Scheme */
+        :root {
+            --purple: #6a0dad;
+            --light-purple: #9c70d6;
+            --yellow: #ffd700;
+            --light-yellow: #fff3b0;
+            --white: #ffffff;
+            --gray: #f5f5f5;
+            --dark-gray: #333333;
+        }
+        
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        section {
+            padding: 3rem 0;
+        }
+        
+        h1, h2, h3, h4 {
+            color: var(--purple);
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            background-color: var(--yellow);
+            color: var(--purple);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+        
+        .btn:hover {
+            background-color: var(--light-yellow);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        }
+        
+        .btn-purple {
+            background-color: var(--purple);
+            color: white;
+        }
+        
+        .btn-purple:hover {
+            background-color: var(--light-purple);
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--purple);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo-img {
+            height: 60px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .logo-text span {
+            color: var(--yellow);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 0;
+        }
+        
+        nav ul li a:hover {
+            color: var(--yellow);
+            border-bottom: 2px solid var(--yellow);
+        }
+        
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(106, 13, 173, 0.7), rgba(106, 13, 173, 0.7)), 
+                        url('https://images.unsplash.com/photo-1604881991720-f91add269bed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+        
+        /* Age Groups Section */
+        .age-groups {
+            background-color: var(--gray);
+            padding: 4rem 0;
+        }
+        
+        .age-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .age-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+            padding: 2rem;
+            border-top: 5px solid var(--purple);
+        }
+        
+        .age-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .age-icon {
+            font-size: 3rem;
+            color: var(--purple);
+            margin-bottom: 1rem;
+        }
+        
+        /* Programs Section */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .program-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .program-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .program-content {
+            padding: 1.5rem;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--purple);
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .testimonials h2 {
+            color: white;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background-color: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--yellow);
+        }
+        
+        /* Curriculum Section */
+        .curriculum {
+            background-color: var(--gray);
+        }
+        
+        .curriculum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .curriculum-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--yellow);
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-info {
+            background-color: var(--purple);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        
+        .contact-info h3 {
+            color: var(--yellow);
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info p {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info i {
+            margin-right: 1rem;
+            color: var(--yellow);
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            color: var(--yellow);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--yellow);
+        }
+        
+        .newsletter {
+            margin-top: 1rem;
+        }
+        
+        .newsletter input {
+            padding: 0.8rem;
+            border: none;
+            border-radius: 4px;
+            width: 70%;
+            margin-right: 0.5rem;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Program Detail Page Styles */
+        .program-detail {
+            padding: 4rem 0;
+        }
+        
+        .program-hero {
+            background-size: cover;
+            background-position: center;
+            padding: 5rem 0;
+            color: white;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .program-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .program-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-card {
+            background-color: var(--gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--purple);
+        }
+        
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .material-card {
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .material-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 80px);
+                background-color: var(--purple);
+                transition: left 0.3s;
+                padding: 2rem;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 1rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            section {
+                padding: 2rem 0;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="https://via.placeholder.com/60x60?text=DHAMA" alt="Abike Montessori Logo" class="logo-img">
+                <div class="logo-text">Abike <span>Montessori</span></div>
+            </a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#programs">Programs</a></li>
+                    <li><a href="index.html#curriculum">Curriculum</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Programs Section -->
+    <section id="programs" class="container">
+        <h2>Our Montessori Programs</h2>
+        <div class="programs-grid">
+            <div class="program-card">
+                <img src="https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Toddler Program" class="program-img">
+                <div class="program-content">
+                    <h3>Toddler Program</h3>
+                    <p>For children 18 months to 3 years old. Our toddler program focuses on developing independence, language skills, and motor coordination in a nurturing environment.</p>
+                    <a href="toddler-program.html" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="program-card">
+                <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Early Childhood Program" class="program-img">
+                <div class="program-content">
+                    <h3>Early Childhood/Kindergarten</h3>
+                    <p>For children 3-6 years old. This program prepares children for elementary school with a focus on practical life skills, sensorial exploration, and early academics.</p>
+                    <a href="early-childhood.html" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="program-card">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Elementary Program" class="program-img">
+                <div class="program-content">
+                    <h3>Elementary Program</h3>
+                    <p>For Grades 1-3. Our lower elementary program builds on Montessori foundations with advanced practical life, mathematics, language arts, and cultural studies.</p>
+                    <a href="elementary-program.html" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="program-card">
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Camp Program" class="program-img">
+                <div class="program-content">
+                    <h3>Camp Programs</h3>
+                    <p>We offer Christmas, Easter and Summer camps for children in St. Kitts with the same love and attention as our regular programs.</p>
+                    <a href="camp-programs.html" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rest of your existing content... -->
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a nav link
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form Handling
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>

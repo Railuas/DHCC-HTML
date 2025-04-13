@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diligent Hands Abike Montessori Academy | St. Kitts</title>
+    <style>
+        /* Color Scheme */
+        :root {
+            --purple: #6a0dad;
+            --light-purple: #9c70d6;
+            --yellow: #ffd700;
+            --light-yellow: #fff3b0;
+            --white: #ffffff;
+            --gray: #f5f5f5;
+            --dark-gray: #333333;
+        }
+        
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        section {
+            padding: 3rem 0;
+        }
+        
+        h1, h2, h3, h4 {
+            color: var(--purple);
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        ul {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+        
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            background-color: var(--yellow);
+            color: var(--purple);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+        
+        .btn:hover {
+            background-color: var(--light-yellow);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        }
+        
+        .btn-purple {
+            background-color: var(--purple);
+            color: white;
+        }
+        
+        .btn-purple:hover {
+            background-color: var(--light-purple);
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--purple);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo-img {
+            height: 60px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .logo-text span {
+            color: var(--yellow);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 0;
+        }
+        
+        nav ul li a:hover {
+            color: var(--yellow);
+            border-bottom: 2px solid var(--yellow);
+        }
+        
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(106, 13, 173, 0.7), rgba(106, 13, 173, 0.7)), 
+                        url('https://images.unsplash.com/photo-1604881991720-f91add269bed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+        
+        /* Age Groups Section */
+        .age-groups {
+            background-color: var(--gray);
+            padding: 4rem 0;
+        }
+        
+        .age-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .age-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+            padding: 2rem;
+            border-top: 5px solid var(--purple);
+        }
+        
+        .age-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .age-icon {
+            font-size: 3rem;
+            color: var(--purple);
+            margin-bottom: 1rem;
+        }
+        
+        /* Programs Section */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .program-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .program-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .program-content {
+            padding: 1.5rem;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--purple);
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .testimonials h2 {
+            color: white;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background-color: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--yellow);
+        }
+        
+        /* Curriculum Section */
+        .curriculum {
+            background-color: var(--gray);
+        }
+        
+        .curriculum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .curriculum-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--yellow);
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-info {
+            background-color: var(--purple);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        
+        .contact-info h3 {
+            color: var(--yellow);
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info p {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info i {
+            margin-right: 1rem;
+            color: var(--yellow);
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            color: var(--yellow);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--yellow);
+        }
+        
+        .newsletter {
+            margin-top: 1rem;
+        }
+        
+        .newsletter input {
+            padding: 0.8rem;
+            border: none;
+            border-radius: 4px;
+            width: 70%;
+            margin-right: 0.5rem;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Program Detail Pages */
+        .program-detail-page {
+            display: none;
+        }
+        
+        .program-hero {
+            background-size: cover;
+            background-position: center;
+            padding: 5rem 0;
+            color: white;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .program-detail-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .program-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-card {
+            background-color: var(--gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--purple);
+        }
+        
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .material-card {
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .material-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn {
+            margin-bottom: 2rem;
+        }
+        
+        /* Curriculum Detail Pages */
+        .curriculum-detail-page {
+            display: none;
+        }
+        
+        .curriculum-hero {
+            background: linear-gradient(rgba(106, 13, 173, 0.7), rgba(106, 13, 173, 0.7)), 
+                        url('https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 5rem 0;
+            color: white;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .curriculum-detail-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .curriculum-area {
+            margin-bottom: 3rem;
+        }
+        
+        .materials-list {
+            columns: 2;
+            margin: 1rem 0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .materials-list {
+                columns: 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 80px);
+                background-color: var(--purple);
+                transition: left 0.3s;
+                padding: 2rem;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 1rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            section {
+                padding: 2rem 0;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo" onclick="showHomePage(event)">
+                <img src="https://www.facebook.com/photo/?fbid=1033769755110028&set=a.616663440153997" alt="Abike Montessori Logo" class="logo-img">
+                <div class="logo-text">Abike <span>Montessori</span></div>
+            </a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#" onclick="showHomePage(event)">Home</a></li>
+                    <li><a href="#programs" onclick="showProgramsSection(event)">Programs</a></li>
+                    <li><a href="#curriculum" onclick="showCurriculumSection(event)">Curriculum</a></li>
+                    <li><a href="#about" onclick="showAboutSection(event)">About Us</a></li>
+                    <li><a href="#contact" onclick="showContactSection(event)">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+        <!-- Home Page -->
+        <div id="home-page">
+            <!-- Hero Section -->
+            <section id="home" class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Love Never Fails!</h1>
+                        <p>Diligent Hands Abike Montessori Academy - Where academic excellence is pursued in a loving environment</p>
+                        <a href="#programs" class="btn btn-purple" onclick="showProgramsSection(event)">Explore Our Programs</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Age Groups Section -->
+            <section class="age-groups">
+                <div class="container">
+                    <h2>We Nurture Young Minds From</h2>
+                    <div class="age-grid">
+                        <div class="age-card">
+                            <div class="age-icon">
+                                <i class="fas fa-baby"></i>
+                            </div>
+                            <h3>Toddlers</h3>
+                            <p>18 months - 3 years</p>
+                            <p>Our youngest learners explore the world through sensory play and guided discovery</p>
+                        </div>
+                        <div class="age-card">
+                            <div class="age-icon">
+                                <i class="fas fa-child"></i>
+                            </div>
+                            <h3>Early Childhood</h3>
+                            <p>3 - 6 years</p>
+                            <p>Kindergarten readiness with a focus on independence and foundational skills</p>
+                        </div>
+                        <div class="age-card">
+                            <div class="age-icon">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <h3>Lower Elementary</h3>
+                            <p>Grades 1-3</p>
+                            <p>Building on Montessori foundations with advanced practical life and academic skills</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Programs Section -->
+            <section id="programs" class="container">
+                <h2>Our Montessori Programs</h2>
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <img src="https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Toddler Program" class="program-img">
+                        <div class="program-content">
+                            <h3>Toddler Program</h3>
+                            <p>For children 18 months to 3 years old. Our toddler program focuses on developing independence, language skills, and motor coordination in a nurturing environment.</p>
+                            <a href="#" class="btn" onclick="showToddlerProgram(event)">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="program-card">
+                        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Early Childhood Program" class="program-img">
+                        <div class="program-content">
+                            <h3>Early Childhood/Kindergarten</h3>
+                            <p>For children 3-6 years old. This program prepares children for elementary school with a focus on practical life skills, sensorial exploration, and early academics.</p>
+                            <a href="#" class="btn" onclick="showEarlyChildhoodProgram(event)">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="program-card">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Elementary Program" class="program-img">
+                        <div class="program-content">
+                            <h3>Elementary Program</h3>
+                            <p>For Grades 1-3. Our lower elementary program builds on Montessori foundations with advanced practical life, mathematics, language arts, and cultural studies.</p>
+                            <a href="#" class="btn" onclick="showElementaryProgram(event)">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="program-card">
+                        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Camp Program" class="program-img">
+                        <div class="program-content">
+                            <h3>Camp Programs</h3>
+                            <p>We offer Christmas, Easter and Summer camps for children in St. Kitts with the same love and attention as our regular programs.</p>
+                            <a href="#" class="btn" onclick="showCampProgram(event)">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Vision Section -->
+            <section id="about" class="testimonials">
+                <div class="container">
+                    <h2>Our Vision</h2>
+                    <div class="testimonial-card" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                        <p class="testimonial-text">"We at Diligent Hands Abike Montessori Academy consider it an honor to serve you and meet the specific needs of your child. We believe that love, personalized care, and individual attention opens up the doorway to learning and academic excellence. The love shared at our facility is second to none. We strive for excellence and believe that your child is a gift from Almighty God and has his/her own uniqueness."</p>
+                        <p class="testimonial-author">- Abike Joseph, School Principal</p>
+                    </div>
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <blockquote style="font-size: 1.2rem; color: var(--yellow); font-style: italic;">
+                            "TO PROVIDE AND MAINTAIN AN ENVIRONMENT WHERE CHILDREN CAN FEEL LOVED, LEARNING IS FUN AND ACADEMIC EXCELLENCE IS PURSUED"
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Curriculum Section -->
+            <section id="curriculum" class="curriculum">
+                <div class="container">
+                    <h2>Our Montessori Curriculum</h2>
+                    <div class="curriculum-grid">
+                        <div class="curriculum-card" onclick="showPracticalLifeCurriculum(event)">
+                            <h3><i class="fas fa-hand-holding-heart" style="color: var(--purple);"></i> Practical Life</h3>
+                            <p>These are the first exercises introduced to the children. They create the foundation upon which all other work in the classroom depends.</p>
+                            <a href="#" class="btn" style="margin-top: 1rem;">Learn More</a>
+                        </div>
+                        <div class="curriculum-card" onclick="showCulturalScienceCurriculum(event)">
+                            <h3><i class="fas fa-globe-americas" style="color: var(--purple);"></i> Cultural & Science</h3>
+                            <p>These lessons allow the child to explore and discover their environment and the world as a whole.</p>
+                            <a href="#" class="btn" style="margin-top: 1rem;">Learn More</a>
+                        </div>
+                        <div class="curriculum-card" onclick="showSensorialCurriculum(event)">
+                            <h3><i class="fas fa-hands" style="color: var(--purple);"></i> Sensorial</h3>
+                            <p>These assist the child in organizing and simplifying the learning experience.</p>
+                            <a href="#" class="btn" style="margin-top: 1rem;">Learn More</a>
+                        </div>
+                        <div class="curriculum-card" onclick="showMathematicsCurriculum(event)">
+                            <h3><i class="fas fa-calculator" style="color: var(--purple);"></i> Mathematics</h3>
+                            <p>In helping in the organization of the mathematical mind, the materials expose the world of numbers.</p>
+                            <a href="#" class="btn" style="margin-top: 1rem;">Learn More</a>
+                        </div>
+                        <div class="curriculum-card" onclick="showLanguageCurriculum(event)">
+                            <h3><i class="fas fa-book-open" style="color: var(--purple);"></i> Language</h3>
+                            <p>The Language materials encourage refinement and enrichment as the initial steps on the road to writing and reading.</p>
+                            <a href="#" class="btn" style="margin-top: 1rem;">Learn More</a>
+                        </div>
+                        <div class="curriculum-card" onclick="showGracePeaceCurriculum(event)">
+                            <h3><i class="fas fa-peace" style="color: var(--purple);"></i> Grace and Peace</h3>
+                            <p>Good manners and respect for others are essential qualities for a child to cultivate in the early years of life.</p>
+                            <a href="#" class="btn" style="margin-top: 1rem;">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact">
+                <div class="container">
+                    <h2>Contact Us</h2>
+                    <div class="contact-container">
+                        <div class="contact-info">
+                            <h3>Get In Touch</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> Horsford Road, Fortlands, Basseterre, Saint Kitts and Nevis</p>
+                            <p><i class="fas fa-phone"></i> (869) 765-6718</p>
+                            <p><i class="fas fa-envelope"></i> diligenthandschildcare@gmail.com</p>
+                            <p><i class="fas fa-clock"></i> Monday - Friday: 8:30am - 4pm</p>
+                            <div style="margin-top: 2rem;">
+                                <a href="form.jotform.com/250647204519860" class="btn btn-purple" style="margin-right: 1rem;">Enroll Now</a>
+                                <a href="tel:8697656718" class="btn"><i class="fas fa-phone"></i> Call Us</a>
+                            </div>
+                        </div>
+                        <div class="contact-form">
+                            <h3>Send Us a Message</h3>
+                            <form id="contactForm">
+                                <div class="form-group">
+                                    <label for="name">Name *</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message *</label>
+                                    <textarea id="message" name="message" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-purple">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Program Detail Pages -->
+        <!-- Toddler Program -->
+        <div id="toddler-program-page" class="program-detail-page">
+            <section class="program-hero" style="background: linear-gradient(rgba(106, 13, 173, 0.7), url('https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                <div class="container">
+                    <h1>Toddler Program</h1>
+                    <p>For children 18 months to 3 years</p>
+                </div>
+            </section>
+
+            <section class="program-detail">
+                <div class="container">
+                    <button class="btn back-btn" onclick="showProgramsSection(event)"><i class="fas fa-arrow-left"></i> Back to Programs</button>
+                    <div class="program-detail-content">
+                        <h2>Montessori for Toddlers</h2>
+                        <p>Our toddler program is carefully designed to meet the developmental needs of children from 18 months to 3 years old. In this sensitive period of rapid growth, we provide a nurturing environment that fosters independence, language development, and motor coordination.</p>
+                        
+                        <h3>Key Features</h3>
+                        <div class="program-features">
+                            <div class="feature-card">
+                                <h4><i class="fas fa-baby"></i> Independence</h4>
+                                <p>Child-sized furniture and tools allow toddlers to do things for themselves, building confidence and self-esteem. Activities include dressing frames, snack preparation, and cleaning up.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-comments"></i> Language Development</h4>
+                                <p>Vocabulary building through naming objects, singing, and reading helps develop early communication skills. We use sandpaper letters and vocabulary cards to introduce language concepts.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-hands"></i> Motor Skills</h4>
+                                <p>Activities like pouring, spooning, and stacking develop both fine and gross motor coordination. We provide materials that challenge and develop their growing physical abilities.</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Montessori Materials</h3>
+                        <p>Our toddler classroom features specially designed Montessori materials:</p>
+                        <div class="materials-grid">
+                            <div class="material-card">
+                                <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Practical Life Materials">
+                                <h4>Practical Life</h4>
+                                <p>Dressing frames, pouring activities, and cleaning tools</p>
+                            </div>
+                            <div class="material-card">
+                                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Sensorial Materials">
+                                <h4>Sensorial</h4>
+                                <p>Color tablets, sound boxes, and texture boards</p>
+                            </div>
+                            <div class="material-card">
+                                <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Language Materials">
+                                <h4>Language</h4>
+                                <p>Vocabulary cards, sandpaper letters, and picture books</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Daily Schedule</h3>
+                        <p>Our toddler program follows a predictable rhythm that provides security while allowing for individual needs:</p>
+                        <ul>
+                            <li><strong>8:30-9:00:</strong> Arrival & Free Play</li>
+                            <li><strong>9:00-10:30:</strong> Montessori Work Cycle</li>
+                            <li><strong>10:30-11:00:</strong> Outdoor Play</li>
+                            <li><strong>11:00-11:30:</strong> Lunch</li>
+                            <li><strong>11:30-2:00:</strong> Nap/Rest Time</li>
+                            <li><strong>2:00-2:30:</strong> Afternoon Snack</li>
+                            <li><strong>2:30-3:30:</strong> Group Activities & Dismissal</li>
+                        </ul>
+                        
+                        <h3>Learning Outcomes</h3>
+                        <p>By the end of our toddler program, children typically demonstrate:</p>
+                        <ul>
+                            <li>Increased independence in self-care activities</li>
+                            <li>Expanded vocabulary and communication skills</li>
+                            <li>Improved fine and gross motor coordination</li>
+                            <li>Ability to follow simple instructions</li>
+                            <li>Emerging social skills and grace & courtesy</li>
+                        </ul>
+                        
+                        <div style="text-align: center; margin-top: 3rem;">
+                            <a href="#contact" class="btn btn-purple" onclick="showContactSection(event)">Schedule a Visit</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Early Childhood Program -->
+        <div id="early-childhood-page" class="program-detail-page">
+            <section class="program-hero" style="background: linear-gradient(rgba(106, 13, 173, 0.7), url('https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                <div class="container">
+                    <h1>Early Childhood Program</h1>
+                    <p>For children 3-6 years</p>
+                </div>
+            </section>
+
+            <section class="program-detail">
+                <div class="container">
+                    <button class="btn back-btn" onclick="showProgramsSection(event)"><i class="fas fa-arrow-left"></i> Back to Programs</button>
+                    <div class="program-detail-content">
+                        <h2>Montessori for Early Childhood</h2>
+                        <p>Our Early Childhood program serves children from 3 to 6 years old, providing a carefully prepared environment where children can explore, discover, and learn at their own pace. This mixed-age classroom allows younger children to learn from older peers and older children to reinforce their learning by teaching concepts they've mastered.</p>
+                        
+                        <h3>Key Features</h3>
+                        <div class="program-features">
+                            <div class="feature-card">
+                                <h4><i class="fas fa-book"></i> Integrated Curriculum</h4>
+                                <p>Subjects are interconnected, allowing children to see relationships between different areas of learning. A study of plants might include science, language, art, and practical life activities.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-child"></i> Hands-on Learning</h4>
+                                <p>Concrete materials allow children to understand abstract concepts through physical manipulation before moving to paper-and-pencil work.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-users"></i> Mixed-Age Grouping</h4>
+                                <p>Children stay with the same teacher for three years, creating a stable community where older children mentor younger ones.</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Curriculum Areas</h3>
+                        <div class="program-features">
+                            <div class="feature-card">
+                                <h4><i class="fas fa-hand-holding-heart"></i> Practical Life</h4>
+                                <p>Advanced care of self and environment, food preparation, and grace & courtesy lessons.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-hands"></i> Sensorial</h4>
+                                <p>Refinement of all senses through materials that isolate qualities like color, size, shape, texture, sound, and smell.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-calculator"></i> Mathematics</h4>
+                                <p>Concrete materials for counting, operations, and introduction to the decimal system.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-book-open"></i> Language</h4>
+                                <p>Phonetic approach to reading, moveable alphabet for word building, and beginning grammar.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-globe-americas"></i> Cultural Studies</h4>
+                                <p>Geography, science, history, art, and music integrated throughout the curriculum.</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Typical Daily Schedule</h3>
+                        <ul>
+                            <li><strong>8:30-9:00:</strong> Arrival & Morning Work</li>
+                            <li><strong>9:00-11:30:</strong> Uninterrupted Work Cycle</li>
+                            <li><strong>11:30-12:00:</strong> Outdoor Play</li>
+                            <li><strong>12:00-12:30:</strong> Lunch</li>
+                            <li><strong>12:30-2:00:</strong> Rest/Quiet Activities</li>
+                            <li><strong>2:00-2:30:</strong> Afternoon Work Period</li>
+                            <li><strong>2:30-3:00:</strong> Group Activities</li>
+                            <li><strong>3:00-3:30:</strong> Dismissal</li>
+                        </ul>
+                        
+                        <h3>Kindergarten Year</h3>
+                        <p>The third year in our Early Childhood program is the crucial "kindergarten year" where children synthesize all they've learned in previous years. They emerge as classroom leaders, mentoring younger students while solidifying their academic foundation for elementary school.</p>
+                        
+                        <div style="text-align: center; margin-top: 3rem;">
+                            <a href="#contact" class="btn btn-purple" onclick="showContactSection(event)">Schedule a Visit</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Elementary Program -->
+        <div id="elementary-program-page" class="program-detail-page">
+            <section class="program-hero" style="background: linear-gradient(rgba(106, 13, 173, 0.7), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                <div class="container">
+                    <h1>Elementary Program</h1>
+                    <p>For Grades 1-3</p>
+                </div>
+            </section>
+
+            <section class="program-detail">
+                <div class="container">
+                    <button class="btn back-btn" onclick="showProgramsSection(event)"><i class="fas fa-arrow-left"></i> Back to Programs</button>
+                    <div class="program-detail-content">
+                        <h2>Montessori Elementary Education</h2>
+                        <p>Our Lower Elementary program builds on the foundation established in Early Childhood, serving children in grades 1 through 3 (ages 6-9). At this stage, children move from concrete learning to more abstract thinking, while maintaining the hands-on approach that makes Montessori so effective.</p>
+                        
+                        <h3>Key Features</h3>
+                        <div class="program-features">
+                            <div class="feature-card">
+                                <h4><i class="fas fa-atom"></i> Cosmic Education</h4>
+                                <p>All subjects are presented as interconnected parts of a whole, helping children understand their place in the universe and their responsibility to it.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-lightbulb"></i> Imagination & Abstraction</h4>
+                                <p>Children use their imagination to explore concepts beyond their immediate environment, from ancient civilizations to the vastness of space.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-users"></i> Collaborative Learning</h4>
+                                <p>Students frequently work in small groups, developing teamwork and leadership skills while learning from each other.</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Curriculum Highlights</h3>
+                        <div class="program-features">
+                            <div class="feature-card">
+                                <h4><i class="fas fa-calculator"></i> Mathematics</h4>
+                                <p>Advanced operations, memorization of math facts, fractions, measurement, and introduction to geometry.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-book-open"></i> Language Arts</h4>
+                                <p>Reading fluency, creative and expository writing, grammar analysis, spelling, and research skills.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-globe-americas"></i> Cultural Studies</h4>
+                                <p>Geography, physical science, life science, history, and anthropology presented through "Great Lessons" that spark curiosity.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-hands-helping"></i> Practical Life</h4>
+                                <p>Community service, time management, organization, and responsibility for the classroom environment.</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Typical Daily Schedule</h3>
+                        <ul>
+                            <li><strong>8:30-9:00:</strong> Morning Meeting</li>
+                            <li><strong>9:00-11:30:</strong> Morning Work Cycle (individual and small group lessons)</li>
+                            <li><strong>11:30-12:00:</strong> Outdoor Play</li>
+                            <li><strong>12:00-12:30:</strong> Lunch</li>
+                            <li><strong>12:30-1:00:</strong> Silent Reading</li>
+                            <li><strong>1:00-2:30:</strong> Afternoon Work Cycle (project work)</li>
+                            <li><strong>2:30-3:00:</strong> Community Time</li>
+                            <li><strong>3:00-3:30:</strong> Dismissal</li>
+                        </ul>
+                        
+                        <h3>Assessment</h3>
+                        <p>Rather than traditional tests and grades, we assess students through:</p>
+                        <ul>
+                            <li>Teacher observation and record-keeping</li>
+                            <li>Student portfolios of work</li>
+                            <li>Narrative progress reports</li>
+                            <li>Student-led conferences</li>
+                            <li>Demonstration of mastery through teaching concepts to others</li>
+                        </ul>
+                        
+                        <div style="text-align: center; margin-top: 3rem;">
+                            <a href="#contact" class="btn btn-purple" onclick="showContactSection(event)">Schedule a Visit</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Camp Program -->
+        <div id="camp-program-page" class="program-detail-page">
+            <section class="program-hero" style="background: linear-gradient(rgba(106, 13, 173, 0.7), url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                <div class="container">
+                    <h1>Camp Programs</h1>
+                    <p>Seasonal fun with Montessori values</p>
+                </div>
+            </section>
+
+            <section class="program-detail">
+                <div class="container">
+                    <button class="btn back-btn" onclick="showProgramsSection(event)"><i class="fas fa-arrow-left"></i> Back to Programs</button>
+                    <div class="program-detail-content">
+                        <h2>Montessori-Inspired Camps</h2>
+                        <p>We offer seasonal camps during school breaks that maintain our Montessori approach while incorporating special themes and activities. Our camps provide continuity for current students and an excellent introduction for new children to experience our loving, child-centered environment.</p>
+                        
+                        <h3>Camp Options</h3>
+                        <div class="program-features">
+                            <div class="feature-card">
+                                <h4><i class="fas fa-snowflake"></i> Christmas Camp</h4>
+                                <p>December holiday program with winter-themed activities, crafts, and celebrations of holidays around the world.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-egg"></i> Easter Camp</h4>
+                                <p>Springtime program focusing on renewal, growth, and cultural spring traditions.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-sun"></i> Summer Camp</h4>
+                                <p>8-week summer program with weekly themes like ocean exploration, space adventure, and world cultures.</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Camp Features</h3>
+                        <ul>
+                            <li>Maintains Montessori principles of respect, independence, and hands-on learning</li>
+                            <li>Extended hours available for working parents</li>
+                            <li>Weekly field trips for summer campers</li>
+                            <li>Special guests and presenters</li>
+                            <li>Mixed-age groupings that allow siblings to be together</li>
+                            <li>Flexible enrollment (by the week or for entire camp season)</li>
+                        </ul>
+                        
+                        <h3>Sample Daily Schedule (Summer Camp)</h3>
+                        <ul>
+                            <li><strong>8:30-9:00:</strong> Arrival & Morning Activities</li>
+                            <li><strong>9:00-10:30:</strong> Theme-Based Work Time</li>
+                            <li><strong>10:30-11:30:</strong> Outdoor Water Play</li>
+                            <li><strong>11:30-12:00:</strong> Lunch</li>
+                            <li><strong>12:00-2:00:</strong> Rest/Quiet Activities</li>
+                            <li><strong>2:00-3:00:</strong> Art & Creative Expression</li>
+                            <li><strong>3:00-3:30:</strong> Group Games & Dismissal</li>
+                        </ul>
+                        
+                        <h3>Special Activities</h3>
+                        <p>Depending on the camp theme, children might experience:</p>
+                        <div class="materials-grid">
+                            <div class="material-card">
+                                <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Science Experiments">
+                                <h4>Science Experiments</h4>
+                            </div>
+                            <div class="material-card">
+                                <img src="https://images.unsplash.com/photo-1579783901586-d88db74b4fe4?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Art Projects">
+                                <h4>Art Projects</h4>
+                            </div>
+                            <div class="material-card">
+                                <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Music & Movement">
+                                <h4>Music & Movement</h4>
+                            </div>
+                            <div class="material-card">
+                                <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Nature Exploration">
+                                <h4>Nature Exploration</h4>
+                            </div>
+                        </div>
+                        
+                        <div style="text-align: center; margin-top: 3rem;">
+                            <a href="#contact" class="btn btn-purple" onclick="showContactSection(event)">Inquire About Upcoming Camps</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Curriculum Detail Pages -->
+        <!-- Practical Life Curriculum -->
+        <div id="practical-life-curriculum-page" class="curriculum-detail-page">
+            <section class="curriculum-hero">
+                <div class="container">
+                    <h1>Practical Life Curriculum</h1>
+                    <p>The foundation of Montessori education</p>
+                </div>
+            </section>
+
+            <section class="curriculum-detail">
+                <div class="container">
+                    <button class="btn back-btn" onclick="showCurriculumSection(event)"><i class="fas fa-arrow-left"></i> Back to Curriculum</button>
+                    <div class="curriculum-detail-content">
+                        <h2>Practical Life: Building Independence</h2>
+                        <p>Practical Life exercises are the foundation of the Montessori classroom. These activities help children develop coordination, concentration, independence, and order while preparing them indirectly for more advanced work in all areas of the curriculum.</p>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-hand-sparkles"></i> Care of Self</h3>
+                            <p>Activities that help children become independent in meeting their own needs:</p>
+                            <ul class="materials-list">
+                                <li>Dressing frames (buttons, zippers, snaps, bows)</li>
+                                <li>Hand washing</li>
+                                <li>Nose blowing</li>
+                                <li>Hanging up coats</li>
+                                <li>Putting on shoes</li>
+                                <li>Toileting skills</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-broom"></i> Care of Environment</h3>
+                            <p>Activities that teach children to care for their classroom and surroundings:</p>
+                            <ul class="materials-list">
+                                <li>Sweeping</li>
+                                <li>Mopping</li>
+                                <li>Dusting</li>
+                                <li>Plant care</li>
+                                <li>Table washing</li>
+                                <li>Window cleaning</li>
+                                <li>Flower arranging</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-utensils"></i> Grace & Courtesy</h3>
+                            <p>Lessons in social skills and polite behavior:</p>
+                            <ul class="materials-list">
+                                <li>Greeting others</li>
+                                <li>Saying please and thank you</li>
+                                <li>Interrupting politely</li>
+                                <li>Table manners</li>
+                                <li>Conflict resolution</li>
+                                <li>Offering help</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-cookie-bite"></i> Food Preparation</h3>
+                            <p>Simple cooking activities that develop fine motor skills:</p>
+                            <ul class="materials-list">
+                                <li>Peeling and slicing fruits/vegetables</li>
+                                <li>Spreading</li>
+                                <li>Pouring</li>
+                                <li>Measuring</li>
+                                <li>Mixing</li>
+                                <li>Baking simple recipes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-hands"></i> Control of Movement</h3>
+                            <p>Exercises that develop fine and gross motor control:</p>
+                            <ul class="materials-list">
+                                <li>Walking on the line</li>
+                                <li>Silence game</li>
+                                <li>Carrying objects carefully</li>
+                                <li>Opening and closing containers</li>
+                                <li>Transferring with tongs, spoons, etc.</li>
+                            </ul>
+                        </div>
+                        
+                        <h3>Benefits of Practical Life Activities</h3>
+                        <div class="program-features">
+                            <div class="feature-card">
+                                <h4><i class="fas fa-brain"></i> Cognitive Development</h4>
+                                <p>Children learn to follow sequences, solve problems, and make decisions.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-hands-helping"></i> Social Development</h4>
+                                <p>Children learn to interact appropriately with others and their environment.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-heart"></i> Emotional Development</h4>
+                                <p>Children develop confidence and self-esteem through mastery of real skills.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Cultural & Science Curriculum -->
+        <div id="cultural-science-curriculum-page" class="curriculum-detail-page">
+            <section class="curriculum-hero" style="background: linear-gradient(rgba(106, 13, 173, 0.7), url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                <div class="container">
+                    <h1>Cultural & Science Curriculum</h1>
+                    <p>Exploring our world and beyond</p>
+                </div>
+            </section>
+
+            <section class="curriculum-detail">
+                <div class="container">
+                    <button class="btn back-btn" onclick="showCurriculumSection(event)"><i class="fas fa-arrow-left"></i> Back to Curriculum</button>
+                    <div class="curriculum-detail-content">
+                        <h2>Cultural & Science: Understanding Our World</h2>
+                        <p>Our Cultural and Science curriculum introduces children to geography, history, physical science, life science, and anthropology. These subjects help children understand their place in the world and develop respect for all living things and cultures.</p>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-globe-americas"></i> Geography</h3>
+                            <p>Materials and activities that introduce physical and political geography:</p>
+                            <ul class="materials-list">
+                                <li>Land and water forms</li>
+                                <li>Continent maps and puzzles</li>
+                                <li>Country flags</li>
+                                <li>Cultural studies of different countries</li>
+                                <li>Climate zones</li>
+                                <li>Map making</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-leaf"></i> Botany</h3>
+                            <p>Exploring the plant kingdom through hands-on materials:</p>
+                            <ul class="materials-list">
+                                <li>Parts of plants (root, stem, leaf, flower, fruit)</li>
+                                <li>Plant classification</li>
+                                <li>Tree and leaf identification</li>
+                                <li>Gardening activities</li>
+                                <li>Photosynthesis experiments</li>
+                                <li>Plant life cycles</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-dove"></i> Zoology</h3>
+                            <p>Studying the animal kingdom with classification and care activities:</p>
+                            <ul class="materials-list">
+                                <li>Vertebrate/invertebrate classification</li>
+                                <li>Animal habitat studies</li>
+                                <li>Parts of animals (fish, frog, bird, horse, etc.)</li>
+                                <li>Life cycles (butterfly, frog, chicken)</li>
+                                <li>Animal tracking and observation</li>
+                                <li>Pet care responsibilities</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-atom"></i> Physical Science</h3>
+                            <p>Introduction to basic physics and chemistry concepts:</p>
+                            <ul class="materials-list">
+                                <li>States of matter</li>
+                                <li>Sink and float experiments</li>
+                                <li>Magnetism</li>
+                                <li>Simple machines</li>
+                                <li>Light and color experiments</li>
+                                <li>Weather and climate studies</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-history"></i> History</h3>
+                            <p>Developing a sense of time and human development:</p>
+                            <ul class="materials-list">
+                                <li>Timelines (personal, historical, evolutionary)</li>
+                                <li>Calendar activities</li>
+                                <li>Cultural celebrations</li>
+                                <li>History of writing and numbers</li>
+                                <li>Study of ancient civilizations</li>
+                            </ul>
+                        </div>
+                        
+                        <h3>Cultural Extensions</h3>
+                        <p>We enhance our cultural studies with:</p>
+                        <div class="program-features">
+                            <div class="feature-card">
+                                <h4><i class="fas fa-music"></i> Music</h4>
+                                <p>Exploring instruments, rhythms, and music from different cultures</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-paint-brush"></i> Art</h4>
+                                <p>Art techniques and appreciation from around the world</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-utensils"></i> Food</h4>
+                                <p>Preparing and tasting foods from different cultures</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Sensorial Curriculum -->
+        <div id="sensorial-curriculum-page" class="curriculum-detail-page">
+            <section class="curriculum-hero" style="background: linear-gradient(rgba(106, 13, 173, 0.7), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                <div class="container">
+                    <h1>Sensorial Curriculum</h1>
+                    <p>Refining the senses for learning</p>
+                </div>
+            </section>
+
+            <section class="curriculum-detail">
+                <div class="container">
+                    <button class="btn back-btn" onclick="showCurriculumSection(event)"><i class="fas fa-arrow-left"></i> Back to Curriculum</button>
+                    <div class="curriculum-detail-content">
+                        <h2>Sensorial: The Gateway to Learning</h2>
+                        <p>The Sensorial materials in a Montessori classroom are designed to help children refine each of their senses. These materials isolate one quality such as color, size, shape, texture, sound, or smell, allowing children to focus on that one characteristic.</p>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-eye"></i> Visual Discrimination</h3>
+                            <p>Materials that develop the sense of sight:</p>
+                            <ul class="materials-list">
+                                <li>Pink Tower (size)</li>
+                                <li>Brown Stair (thickness)</li>
+                                <li>Red Rods (length)</li>
+                                <li>Color Tablets (color gradation)</li>
+                                <li>Geometric Cabinet (shape)</li>
+                                <li>Binomial and Trinomial Cubes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-hand-paper"></i> Tactile Sense</h3>
+                            <p>Materials that refine the sense of touch:</p>
+                            <ul class="materials-list">
+                                <li>Touch Boards (rough/smooth)</li>
+                                <li>Touch Tablets (gradation of roughness)</li>
+                                <li>Fabric Box (matching fabrics by feel)</li>
+                                <li>Thermic Tablets (temperature)</li>
+                                <li>Baric Tablets (weight)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-volume-up"></i> Auditory Sense</h3>
+                            <p>Materials that develop the sense of hearing:</p>
+                            <ul class="materials-list">
+                                <li>Sound Cylinders (matching sounds)</li>
+                                <li>Bells (musical pitch)</li>
+                                <li>Rhythm activities</li>
+                                <li>Listening walks</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-wine-bottle"></i> Olfactory & Gustatory</h3>
+                            <p>Materials that refine smell and taste:</p>
+                            <ul class="materials-list">
+                                <li>Smelling Bottles (matching scents)</li>
+                                <li>Tasting Bottles (identifying flavors)</li>
+                                <li>Herb and spice exploration</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-shapes"></i> Stereognostic Sense</h3>
+                            <p>Materials that develop the ability to recognize objects by touch alone:</p>
+                            <ul class="materials-list">
+                                <li>Geometric Solids</li>
+                                <li>Mystery Bag</li>
+                                <li>Sorting activities with eyes closed</li>
+                            </ul>
+                        </div>
+                        
+                        <h3>Benefits of Sensorial Education</h3>
+                        <div class="program-features">
+                            <div class="feature-card">
+                                <h4><i class="fas fa-brain"></i> Cognitive Development</h4>
+                                <p>Children develop classification, ordering, and discrimination skills that form the basis for mathematics and language.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-hands"></i> Fine Motor Skills</h4>
+                                <p>Handling the materials strengthens hand muscles and refines the pincer grasp needed for writing.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-language"></i> Language Development</h4>
+                                <p>Children learn precise vocabulary to describe their sensory experiences (rough, smooth, loud, quiet, etc.).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Mathematics Curriculum -->
+        <div id="mathematics-curriculum-page" class="curriculum-detail-page">
+            <section class="curriculum-hero" style="background: linear-gradient(rgba(106, 13, 173, 0.7), url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                <div class="container">
+                    <h1>Mathematics Curriculum</h1>
+                    <p>Concrete to abstract understanding</p>
+                </div>
+            </section>
+
+            <section class="curriculum-detail">
+                <div class="container">
+                    <button class="btn back-btn" onclick="showCurriculumSection(event)"><i class="fas fa-arrow-left"></i> Back to Curriculum</button>
+                    <div class="curriculum-detail-content">
+                        <h2>Mathematics: Building the Mathematical Mind</h2>
+                        <p>Montessori mathematics materials give children a solid understanding of mathematical concepts by moving from concrete experiences to abstract understanding. Children work with materials that isolate concepts before combining them in more complex ways.</p>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-sort-numeric-up"></i> Numbers 1-10</h3>
+                            <p>Foundational materials that introduce quantity and symbol:</p>
+                            <ul class="materials-list">
+                                <li>Number Rods (quantity)</li>
+                                <li>Sandpaper Numerals (symbol)</li>
+                                <li>Spindle Boxes (quantity to symbol)</li>
+                                <li>Cards and Counters (odd/even)</li>
+                                <li>Memory Game of Numbers</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-infinity"></i> Decimal System</h3>
+                            <p>Materials that introduce place value up to 9,999:</p>
+                            <ul class="materials-list">
+                                <li>Golden Bead Material (concrete quantity)</li>
+                                <li>Number Cards (symbol)</li>
+                                <li>Formation of Numbers</li>
+                                <li>Decimal Layout</li>
+                                <li>Bank Game (operations with golden beads)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-calculator"></i> Operations</h3>
+                            <p>Materials for the four operations (addition, subtraction, multiplication, division):</p>
+                            <ul class="materials-list">
+                                <li>Stamp Game</li>
+                                <li>Dot Game</li>
+                                <li>Bead Bars</li>
+                                <li>Small Bead Frame</li>
+                                <li>Large Bead Frame</li>
+                                <li>Checkerboard (multiplication)</li>
+                                <li>Racks and Tubes (division)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-pizza-slice"></i> Fractions</h3>
+                            <p>Concrete introduction to fractions:</p>
+                            <ul class="materials-list">
+                                <li>Fraction Skittles</li>
+                                <li>Fraction Insets</li>
+                                <li>Fraction Cards</li>
+                                <li>Operations with Fractions</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-shapes"></i> Geometry</h3>
+                            <p>Exploring shapes and their properties:</p>
+                            <ul class="materials-list">
+                                <li>Geometric Cabinet</li>
+                                <li>Constructive Triangles</li>
+                                <li>Geometric Solids</li>
+                                <li>Polygons</li>
+                                <li>Measurement (perimeter, area, volume)</li>
+                            </ul>
+                        </div>
+                        
+                        <h3>Advanced Mathematical Concepts</h3>
+                        <p>For older children, we introduce:</p>
+                        <div class="program-features">
+                            <div class="feature-card">
+                                <h4><i class="fas fa-chart-line"></i> Memorization</h4>
+                                <p>Addition, subtraction, multiplication, and division facts</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-money-bill-wave"></i> Money & Time</h4>
+                                <p>Practical applications of mathematics</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-balance-scale"></i> Measurement</h4>
+                                <p>Standard and metric systems</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-percentage"></i> Pre-Algebra</h4>
+                                <p>Introduction to algebraic concepts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Language Curriculum -->
+        <div id="language-curriculum-page" class="curriculum-detail-page">
+            <section class="curriculum-hero" style="background: linear-gradient(rgba(106, 13, 173, 0.7), url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                <div class="container">
+                    <h1>Language Curriculum</h1>
+                    <p>From spoken word to written expression</p>
+                </div>
+            </section>
+
+            <section class="curriculum-detail">
+                <div class="container">
+                    <button class="btn back-btn" onclick="showCurriculumSection(event)"><i class="fas fa-arrow-left"></i> Back to Curriculum</button>
+                    <div class="curriculum-detail-content">
+                        <h2>Language: The Foundation of Communication</h2>
+                        <p>Our language curriculum follows the natural development of language skills, from spoken language to reading and writing. The Montessori approach emphasizes phonics, whole language, and a rich linguistic environment to nurture competent readers and writers.</p>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-comment-dots"></i> Spoken Language</h3>
+                            <p>Foundational activities that develop vocabulary and expression:</p>
+                            <ul class="materials-list">
+                                <li>Vocabulary enrichment (classified cards, objects)</li>
+                                <li>Storytelling and sequencing</li>
+                                <li>Conversation games</li>
+                                <li>Poetry and rhymes</li>
+                                <li>Sound games (beginning sounds, ending sounds)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-font"></i> Writing Preparation</h3>
+                            <p>Indirect preparation for writing through:</p>
+                            <ul class="materials-list">
+                                <li>Metal Insets (pencil control)</li>
+                                <li>Sandpaper Letters (letter formation)</li>
+                                <li>Moveable Alphabet (word building)</li>
+                                <li>Chalkboards</li>
+                                <li>Tracing activities</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-book-open"></i> Reading</h3>
+                            <p>Phonetic approach to reading development:</p>
+                            <ul class="materials-list">
+                                <li>Phonetic Object Boxes</li>
+                                <li>Phonogram Cards</li>
+                                <li>Puzzle Words (sight words)</li>
+                                <li>Reading Classification</li>
+                                <li>Reading Analysis</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-pen-fancy"></i> Handwriting</h3>
+                            <p>Developing beautiful penmanship:</p>
+                            <ul class="materials-list">
+                                <li>Cursive writing (our preferred method)</li>
+                                <li>Print writing</li>
+                                <li>Journal writing</li>
+                                <li>Story writing</li>
+                                <li>Letter writing</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-language"></i> Grammar</h3>
+                            <p>Concrete introduction to grammar concepts:</p>
+                            <ul class="materials-list">
+                                <li>Grammar Symbols</li>
+                                <li>Noun/Verb Introduction</li>
+                                <li>Article/Adjective Introduction</li>
+                                <li>Sentence Analysis</li>
+                                <li>Parts of Speech</li>
+                            </ul>
+                        </div>
+                        
+                        <h3>Language Extensions</h3>
+                        <p>We enrich our language program with:</p>
+                        <div class="program-features">
+                            <div class="feature-card">
+                                <h4><i class="fas fa-book"></i> Literature</h4>
+                                <p>Quality children's literature read daily</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-theater-masks"></i> Drama</h4>
+                                <p>Puppetry, role-playing, and performances</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-spell-check"></i> Spanish</h4>
+                                <p>Introduction to Spanish vocabulary</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-sign-language"></i> Sign Language</h4>
+                                <p>Basic signs for communication</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Grace and Peace Curriculum -->
+        <div id="grace-peace-curriculum-page" class="curriculum-detail-page">
+            <section class="curriculum-hero" style="background: linear-gradient(rgba(106, 13, 173, 0.7), url('https://images.unsplash.com/photo-1549056572-75914d5d5fd4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+                <div class="container">
+                    <h1>Grace & Peace Curriculum</h1>
+                    <p>Nurturing kind and respectful individuals</p>
+                </div>
+            </section>
+
+            <section class="curriculum-detail">
+                <div class="container">
+                    <button class="btn back-btn" onclick="showCurriculumSection(event)"><i class="fas fa-arrow-left"></i> Back to Curriculum</button>
+                    <div class="curriculum-detail-content">
+                        <h2>Grace & Peace: Social and Emotional Learning</h2>
+                        <p>Our Grace and Peace curriculum focuses on developing social skills, emotional intelligence, and conflict resolution abilities. These lessons help children navigate social situations with confidence and kindness, creating a peaceful classroom community.</p>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-hands-helping"></i> Grace & Courtesy</h3>
+                            <p>Lessons in polite behavior and social norms:</p>
+                            <ul class="materials-list">
+                                <li>Greeting others</li>
+                                <li>Saying please and thank you</li>
+                                <li>Interrupting politely</li>
+                                <li>Offering help</li>
+                                <li>Table manners</li>
+                                <li>Welcoming visitors</li>
+                                <li>Apologizing sincerely</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-heart"></i> Emotional Intelligence</h3>
+                            <p>Activities that develop self-awareness and empathy:</p>
+                            <ul class="materials-list">
+                                <li>Identifying and naming emotions</li>
+                                <li>Peace corner for self-regulation</li>
+                                <li>Empathy exercises</li>
+                                <li>Mindfulness activities</li>
+                                <li>Yoga and breathing techniques</li>
+                                <li>Conflict resolution role-playing</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-peace"></i> Peace Education</h3>
+                            <p>Lessons that promote global citizenship:</p>
+                            <ul class="materials-list">
+                                <li>Peace table for conflict resolution</li>
+                                <li>Study of peacemakers</li>
+                                <li>Cultural appreciation</li>
+                                <li>Environmental stewardship</li>
+                                <li>Community service projects</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-hands"></i> Practical Conflict Resolution</h3>
+                            <p>Tools for solving disagreements peacefully:</p>
+                            <ul class="materials-list">
+                                <li>"I" statements</li>
+                                <li>Active listening</li>
+                                <li>Taking turns speaking</li>
+                                <li>Finding win-win solutions</li>
+                                <li>Using a peace rose or talking stick</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-area">
+                            <h3><i class="fas fa-pray"></i> Spiritual Development</h3>
+                            <p>Nurturing the whole child with:</p>
+                            <ul class="materials-list">
+                                <li>Moments of silence and reflection</li>
+                                <li>Gratitude practices</li>
+                                <li>Celebration of diverse traditions</li>
+                                <li>Nature appreciation</li>
+                                <li>Simple prayers or blessings (optional)</li>
+                            </ul>
+                        </div>
+                        
+                        <h3>Classroom Community</h3>
+                        <p>We foster a peaceful community through:</p>
+                        <div class="program-features">
+                            <div class="feature-card">
+                                <h4><i class="fas fa-users"></i> Community Meetings</h4>
+                                <p>Regular gatherings to discuss classroom issues and celebrate successes</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-star"></i> Leadership Roles</h4>
+                                <p>Opportunities for all children to be classroom helpers and mentors</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-hand-holding-heart"></i> Service Learning</h4>
+                                <p>Projects that help others in our school and community</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-child"></i> Character Education</h4>
+                                <p>Monthly focus on virtues like kindness, honesty, and perseverance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#" onclick="showHomePage(event)">Home</a></li>
+                        <li><a href="#programs" onclick="showProgramsSection(event)">Programs</a></li>
+                        <li><a href="#curriculum" onclick="showCurriculumSection(event)">Curriculum</a></li>
+                        <li><a href="#about" onclick="showAboutSection(event)">About Us</a></li>
+                        <li><a href="#contact" onclick="showContactSection(event)">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Programs</h3>
+                    <ul>
+                        <li><a href="#" onclick="showToddlerProgram(event)">Toddler Program</a></li>
+                        <li><a href="#" onclick="showEarlyChildhoodProgram(event)">Early Childhood</a></li>
+                        <li><a href="#" onclick="showElementaryProgram(event)">Elementary</a></li>
+                        <li><a href="#" onclick="showCampProgram(event)">Camps</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Horsford Road, Fortlands, Basseterre</p>
+                    <p><i class="fas fa-phone"></i> (869) 765-6718</p>
+                    <p><i class="fas fa-envelope"></i> diligenthandschildcare@gmail.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates and parenting tips!</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button class="btn btn-purple">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Diligent Hands Abike Montessori Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a nav link
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+        
+        // Page Navigation Functions
+        function showHomePage(e) {
+            e.preventDefault();
+            document.getElementById('home-page').style.display = 'block';
+            document.querySelectorAll('.program-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            document.querySelectorAll('.curriculum-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            window.scrollTo(0, 0);
+        }
+        
+        function showProgramsSection(e) {
+            e.preventDefault();
+            document.getElementById('home-page').style.display = 'block';
+            document.querySelectorAll('.program-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            document.querySelectorAll('.curriculum-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            const element = document.getElementById('programs');
+            window.scrollTo({
+                top: element.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+        
+        function showCurriculumSection(e) {
+            e.preventDefault();
+            document.getElementById('home-page').style.display = 'block';
+            document.querySelectorAll('.program-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            document.querySelectorAll('.curriculum-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            const element = document.getElementById('curriculum');
+            window.scrollTo({
+                top: element.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+        
+        function showAboutSection(e) {
+            e.preventDefault();
+            document.getElementById('home-page').style.display = 'block';
+            document.querySelectorAll('.program-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            document.querySelectorAll('.curriculum-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            const element = document.getElementById('about');
+            window.scrollTo({
+                top: element.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+        
+        function showContactSection(e) {
+            e.preventDefault();
+            document.getElementById('home-page').style.display = 'block';
+            document.querySelectorAll('.program-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            document.querySelectorAll('.curriculum-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            const element = document.getElementById('contact');
+            window.scrollTo({
+                top: element.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Program Detail Pages
+        function showToddlerProgram(e) {
+            e.preventDefault();
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('toddler-program-page').style.display = 'block';
+            document.querySelectorAll('.curriculum-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            window.scrollTo(0, 0);
+        }
+        
+        function showEarlyChildhoodProgram(e) {
+            e.preventDefault();
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('early-childhood-page').style.display = 'block';
+            document.querySelectorAll('.curriculum-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            window.scrollTo(0, 0);
+        }
+        
+        function showElementaryProgram(e) {
+            e.preventDefault();
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('elementary-program-page').style.display = 'block';
+            document.querySelectorAll('.curriculum-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            window.scrollTo(0, 0);
+        }
+        
+        function showCampProgram(e) {
+            e.preventDefault();
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('camp-program-page').style.display = 'block';
+            document.querySelectorAll('.curriculum-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            window.scrollTo(0, 0);
+        }
+        
+        // Curriculum Detail Pages
+        function showPracticalLifeCurriculum(e) {
+            e.preventDefault();
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('practical-life-curriculum-page').style.display = 'block';
+            document.querySelectorAll('.program-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            window.scrollTo(0, 0);
+        }
+        
+        function showCulturalScienceCurriculum(e) {
+            e.preventDefault();
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('cultural-science-curriculum-page').style.display = 'block';
+            document.querySelectorAll('.program-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            window.scrollTo(0, 0);
+        }
+        
+        function showSensorialCurriculum(e) {
+            e.preventDefault();
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('sensorial-curriculum-page').style.display = 'block';
+            document.querySelectorAll('.program-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            window.scrollTo(0, 0);
+        }
+        
+        function showMathematicsCurriculum(e) {
+            e.preventDefault();
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('mathematics-curriculum-page').style.display = 'block';
+            document.querySelectorAll('.program-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            window.scrollTo(0, 0);
+        }
+        
+        function showLanguageCurriculum(e) {
+            e.preventDefault();
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('language-curriculum-page').style.display = 'block';
+            document.querySelectorAll('.program-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            window.scrollTo(0, 0);
+        }
+        
+        function showGracePeaceCurriculum(e) {
+            e.preventDefault();
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('grace-peace-curriculum-page').style.display = 'block';
+            document.querySelectorAll('.program-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            window.scrollTo(0, 0);
+        }
+        
+        // Form Handling
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            contactForm.reset();
+        });
+        
+        // Initialize - Show Home Page
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('home-page').style.display = 'block';
+            document.querySelectorAll('.program-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            document.querySelectorAll('.curriculum-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
