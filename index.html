@@ -635,6 +635,91 @@
             margin: 1rem 0;
         }
         
+        /* Tuition Page Styles */
+        .tuition-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        
+        .tuition-table th, .tuition-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+        
+        .tuition-table th {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .tuition-table tr:nth-child(even) {
+            background-color: var(--light-gray);
+        }
+        
+        .tuition-table tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .policy-section {
+            margin-bottom: 2rem;
+        }
+        
+        /* Admissions Page Styles */
+        .step {
+            display: flex;
+            margin-bottom: 2rem;
+        }
+        
+        .step-number {
+            flex: 0 0 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        /* FAQ Page Styles */
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--medium-gray);
+            padding-bottom: 1.5rem;
+        }
+        
+        .faq-question {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            color: #555;
+        }
+        
+        /* Parent Involvement Page Styles */
+        .involvement-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--secondary);
+        }
+        
         /* Responsive */
         @media (max-width: 992px) {
             .contact-container {
@@ -691,6 +776,15 @@
             h2 {
                 font-size: 1.8rem;
             }
+            
+            .step {
+                flex-direction: column;
+            }
+            
+            .step-number {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -710,9 +804,13 @@
             <nav id="main-nav">
                 <ul>
                     <li><a href="#" onclick="showHomePage(event)">Home</a></li>
+                    <li><a href="#about" onclick="showAboutSection(event)">About Us</a></li>
                     <li><a href="#programs" onclick="showProgramsSection(event)">Programs</a></li>
                     <li><a href="#curriculum" onclick="showCurriculumSection(event)">Curriculum</a></li>
-                    <li><a href="#about" onclick="showAboutSection(event)">About Us</a></li>
+                    <li><a href="#tuition" onclick="showTuitionSection(event)">Tuition</a></li>
+                    <li><a href="#admissions" onclick="showAdmissionsSection(event)">Admissions</a></li>
+                    <li><a href="#parent-involvement" onclick="showParentInvolvementSection(event)">Parents</a></li>
+                    <li><a href="#faq" onclick="showFaqSection(event)">FAQ</a></li>
                     <li><a href="#contact" onclick="showContactSection(event)">Contact</a></li>
                 </ul>
             </nav>
@@ -729,6 +827,10 @@
                     <div class="hero-content">
                         <h1>Love Never Fails!</h1>
                         <p>Diligent Hands Abike Montessori Academy - Where academic excellence is pursued in a loving environment</p>
+                        <p>We are a peaceful Montessori environment that nurtures the whole child, helping them grow academically, socially, and emotionally.</p>
+                        <div class="rotating-banner" style="color: var(--secondary); font-size: 1.2rem; margin: 1rem 0;">
+                            Infant–Elementary | Montessori-Based | Family-Centered
+                        </div>
                         <a href="#programs" class="btn btn-primary" onclick="showProgramsSection(event)">Explore Our Programs</a>
                     </div>
                 </div>
@@ -763,6 +865,33 @@
                             <p>Grades 1-6</p>
                             <p>Building on Montessori foundations with advanced practical life and academic skills</p>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Us Section -->
+            <section id="about" class="testimonials">
+                <div class="container">
+                    <h2>About Us</h2>
+                    <div class="testimonial-grid">
+                        <div class="testimonial-card">
+                            <h3>Our Mission</h3>
+                            <p class="testimonial-text">At Diligent Hands Abike Montessori Academy, we are committed to nurturing the whole child—academically, emotionally, and socially. Guided by the Montessori philosophy and anchored in our core belief that "LOVE NEVER FAILS," we provide a peaceful, purposeful learning environment where children feel seen, valued, and empowered.</p>
+                        </div>
+                        <div class="testimonial-card">
+                            <h3>Our Philosophy</h3>
+                            <p class="testimonial-text">Our school serves children from early childhood through elementary age, offering a carefully prepared environment that supports independence, creativity, critical thinking, and a genuine love for learning. Each child is encouraged to progress at their own pace, with hands-on materials and guidance that meet their unique developmental needs.</p>
+                        </div>
+                        <div class="testimonial-card">
+                            <h3>From Our Principal</h3>
+                            <p class="testimonial-text">"We at Diligent Hands Abike Montessori Academy consider it an honor to serve you and meet the specific needs of your child. We believe that love, personalized care, and individual attention opens up the doorway to learning and academic excellence. The love shared at our facility is second to none."</p>
+                            <p class="testimonial-author">- Abike Joseph, School Principal</p>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <blockquote style="font-size: 1.2rem; color: var(--secondary); font-style: italic;">
+                            "TO PROVIDE AND MAINTAIN AN ENVIRONMENT WHERE CHILDREN CAN FEEL LOVED, LEARNING IS FUN AND ACADEMIC EXCELLENCE IS PURSUED"
+                        </blockquote>
                     </div>
                 </div>
             </section>
@@ -808,22 +937,6 @@
                 </div>
             </section>
 
-            <!-- Vision Section -->
-            <section id="about" class="testimonials">
-                <div class="container">
-                    <h2>Our Vision</h2>
-                    <div class="testimonial-card" style="text-align: center; max-width: 800px; margin: 0 auto;">
-                        <p class="testimonial-text">"We at Diligent Hands Abike Montessori Academy consider it an honor to serve you and meet the specific needs of your child. We believe that love, personalized care, and individual attention opens up the doorway to learning and academic excellence. The love shared at our facility is second to none. We strive for excellence and believe that your child is a gift from Almighty God and has his/her own uniqueness."</p>
-                        <p class="testimonial-author">- Abike Joseph, School Principal</p>
-                    </div>
-                    <div style="text-align: center; margin-top: 2rem;">
-                        <blockquote style="font-size: 1.2rem; color: var(--secondary); font-style: italic;">
-                            "TO PROVIDE AND MAINTAIN AN ENVIRONMENT WHERE CHILDREN CAN FEEL LOVED, LEARNING IS FUN AND ACADEMIC EXCELLENCE IS PURSUED"
-                        </blockquote>
-                    </div>
-                </div>
-            </section>
-
             <!-- Curriculum Section -->
             <section id="curriculum" class="curriculum">
                 <div class="container">
@@ -863,6 +976,239 @@
                 </div>
             </section>
 
+            <!-- Tuition Section -->
+            <section id="tuition" class="programs">
+                <div class="container">
+                    <h2>Tuition & Fees</h2>
+                    <p>At Diligent Hands Abike Montessori Academy, we are committed to providing high-quality education with clear and transparent financial policies.</p>
+                    
+                    <h3 style="text-align: left; margin-top: 2rem;">Program Tuition</h3>
+                    <table class="tuition-table">
+                        <thead>
+                            <tr>
+                                <th>Program</th>
+                                <th>Time</th>
+                                <th>Tuition (XCD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Daycare Program – Half Day</td>
+                                <td>8:00 AM – 12:00 PM</td>
+                                <td>$500.00/month</td>
+                            </tr>
+                            <tr>
+                                <td>Daycare Program – Full Day</td>
+                                <td>8:00 AM – 4:00 PM</td>
+                                <td>$900.00/month</td>
+                            </tr>
+                            <tr>
+                                <td>Toddler Program – Half Day</td>
+                                <td>8:30 AM – 12:00 PM</td>
+                                <td>$3000.00/term</td>
+                            </tr>
+                            <tr>
+                                <td>Toddler Program – Full Day</td>
+                                <td>8:30 AM – 3:30 PM</td>
+                                <td>$3300.00/term</td>
+                            </tr>
+                            <tr>
+                                <td>Pre-school Program</td>
+                                <td>8:30 AM – 3:30 PM</td>
+                                <td>$3300.00/term</td>
+                            </tr>
+                            <tr>
+                                <td>Kindergarten</td>
+                                <td>8:30 AM – 3:30 PM</td>
+                                <td>$3500.00/term</td>
+                            </tr>
+                            <tr>
+                                <td>Elementary Program (Grades 1–2)</td>
+                                <td>8:30 AM – 3:30 PM</td>
+                                <td>$4500.00/term</td>
+                            </tr>
+                            <tr>
+                                <td>Elementary Program (Grades 3–4)</td>
+                                <td>8:30 AM – 3:30 PM</td>
+                                <td>$4700.00/term</td>
+                            </tr>
+                            <tr>
+                                <td>Elementary Program (Grades 5–6)</td>
+                                <td>8:30 AM – 3:30 PM</td>
+                                <td>$5000.00/term</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="policy-section">
+                        <h3>Deposit Policy</h3>
+                        <ul>
+                            <li>A non-refundable deposit is required upon enrollment for most programs.</li>
+                            <li>Daycare Half-Day: $500</li>
+                            <li>Daycare Full-Day: $900</li>
+                            <li>Preschool to Kindergarten: $1,000</li>
+                            <li>Deposits are credited toward the final term's tuition.</li>
+                            <li>Elementary programs do not require a deposit.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="policy-section">
+                        <h3>Payment Policy</h3>
+                        <ul>
+                            <li>Daycare fees are due within 3 days of the start of each month. A 20% late fee will apply for overdue payments.</li>
+                            <li>Preschool, Kindergarten, and Elementary fees are due within 3 days of the start of each school term. A 10% late fee applies for late payments.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="policy-section">
+                        <h3>Withdrawal Policy</h3>
+                        <p>A written notice must be submitted at least one term in advance if you intend to withdraw your child from the program.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Admissions Section -->
+            <section id="admissions" class="age-groups">
+                <div class="container">
+                    <h2>Admissions Process</h2>
+                    <p>To be eligible for enrollment, students must meet the age requirements and be toilet-trained (for students entering the Pre-school Program).</p>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Submission of Application Form</h3>
+                            <p>Parents/guardians must complete and submit an Enrollment Application Form along with the following documents:</p>
+                            <ul>
+                                <li>Copy of the child's birth certificate</li>
+                                <li>Copy of vaccination/immunization records</li>
+                                <li>Recent passport-sized photographs of the child</li>
+                                <li>Any relevant medical records or special needs documentation (if applicable)</li>
+                                <li>Previous school records (if transferring from another school)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>School visit & Parents Orientation</h3>
+                            <p>Parents and the child must attend a scheduled school tour and orientation to understand the Montessori philosophy, curriculum, and expectations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Student observation/Assessment (If Applicable)</h3>
+                            <p>The child may be required to attend a trial session or an observation period in the classroom to access readiness.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Admission Decision & Registration Fee</h3>
+                            <ul>
+                                <li>Once accepted, parents will receive an Acceptance Letter along with tuition details.</li>
+                                <li>A non-refundable registration fee must be paid to secure the child's spot.</li>
+                                <li>All programs require a deposit. This is held towards school fees payment for the final term at the school.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3 style="text-align: left; margin-top: 2rem;">Uniform Requirement</h3>
+                    <ul>
+                        <li>All students from the Toddler Program through Elementary are required to wear the official school uniform.</li>
+                        <li>The uniform must be worn daily and adhere to the school's dress code guidelines.</li>
+                        <li>Parents are responsible for ensuring that their child has appropriate uniform.</li>
+                    </ul>
+                    
+                    <div style="text-align: center; margin-top: 3rem;">
+                        <a href="#contact" class="btn btn-primary" onclick="showContactSection(event)">Request More Information</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Parent Involvement Section -->
+            <section id="parent-involvement" class="testimonials">
+                <div class="container">
+                    <h2>Parent Involvement</h2>
+                    <p>At Diligent Hands Abike Montessori Academy, we believe that education is most powerful when school and home work together. Parents are not just welcome here—they're an essential part of our community.</p>
+                    
+                    <div class="involvement-card">
+                        <h3><i class="fas fa-calendar-alt"></i> School Events & Celebrations</h3>
+                        <p>Join us for special events such as cultural days, holiday celebrations, and family fun days that bring our school community together in joy and learning.</p>
+                    </div>
+                    
+                    <div class="involvement-card">
+                        <h3><i class="fas fa-hands-helping"></i> Volunteer Opportunities</h3>
+                        <p>Whether it's helping with gardening, assisting during field trips, or sharing a special skill, your time and talents are always welcome and appreciated.</p>
+                    </div>
+                    
+                    <div class="involvement-card">
+                        <h3><i class="fas fa-comments"></i> Open Communication</h3>
+                        <p>We use WhatsApp Community to keep families updated on classroom happenings, upcoming events, and your child's progress. We also encourage open conversations between parents and teachers.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq" class="programs">
+                <div class="container">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            What is your potty-training policy?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Children enrolled in our Pre-K- Kindergarten (3–6 years) classrooms must be fully potty trained before attending. We understand accidents may still happen occasionally, and our staff responds with patience and care. For children in the Toddler Program (18 months–3 years), potty learning is gently supported as part of their daily routine, aligned with Montessori principles of independence.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            What is your nap schedule?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Nap time is scheduled from 1:15 PM to 2:30 PM each day. During this time, children who need rest are given a quiet, comfortable space to nap. Those who do not nap are offered calm, quiet activities to ensure the environment remains peaceful for resting classmates.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            What is your food policy?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We do not provide meals or snacks. Families are required to pack nutritious, allergy-conscious meals and snacks each day. Please note that sharing food is not permitted due to the risk of allergies and maintaining a safe environment for all students. Water bottles should be sent daily and labeled with your child's name.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            What is your discipline philosophy?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our approach to discipline is rooted in the Montessori philosophy of respect, self-regulation, and natural consequences. We guide children to understand their actions, make thoughtful choices, and develop self-discipline through a supportive and respectful environment. Conflicts are seen as opportunities to learn social problem-solving and communication skills.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            How do you support new students in transitioning to the classroom?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We recognize that entering a new environment can be a big step. Our transition process includes gradual orientation, where new students may start with shorter days or individual visits before fully joining the classroom. Teachers offer individualized attention to help children feel safe, comfortable, and confident in their new surroundings. We also communicate closely with families to support each child's unique needs during this transition.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Contact Section -->
             <section id="contact">
                 <div class="container">
@@ -873,7 +1219,12 @@
                             <p><i class="fas fa-map-marker-alt"></i> Fortlands, Basseterre, Saint Kitts and Nevis</p>
                             <p><i class="fas fa-phone"></i> (869) 765-6718</p>
                             <p><i class="fas fa-envelope"></i> diligenthandschildcare@gmail.com</p>
+                            <p><i class="fas fa-globe"></i> abikemontessori.com</p>
                             <p><i class="fas fa-clock"></i> Monday - Friday: 8:30am - 4pm</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
                             <div style="margin-top: 2rem;">
                                 <a href="form.jotform.com/250647204519860" class="btn btn-primary" style="margin-right: 1rem;">Enroll Now</a>
                                 <a href="tel:8697656718" class="btn"><i class="fas fa-phone"></i> Call Us</a>
@@ -926,36 +1277,32 @@
                         <h3>Key Features</h3>
                         <div class="program-features">
                             <div class="feature-card">
-                                <h4><i class="fas fa-baby"></i> Independence</h4>
-                                <p>Child-sized furniture and tools allow toddlers to do things for themselves, building confidence and self-esteem. Activities include dressing frames, snack preparation, and cleaning up.</p>
+                                <h4><i class="fas fa-baby"></i> Practical Life Skills</h4>
+                                <p>Children engage in everyday activities such as pouring, dressing, cleaning, and caring for their environment. These tasks build independence, concentration, coordination, and a sense of responsibility.</p>
                             </div>
                             <div class="feature-card">
-                                <h4><i class="fas fa-comments"></i> Language Development</h4>
-                                <p>Vocabulary building through naming objects, singing, and reading helps develop early communication skills. We use sandpaper letters and vocabulary cards to introduce language concepts.</p>
+                                <h4><i class="fas fa-running"></i> Motor Skills</h4>
+                                <p>We support both fine and gross motor development through activities like stacking, grasping, climbing, and balancing. These help toddlers build strength, control, and confidence in their movements.</p>
                             </div>
                             <div class="feature-card">
-                                <h4><i class="fas fa-hands"></i> Motor Skills</h4>
-                                <p>Activities like pouring, spooning, and stacking develop both fine and gross motor coordination. We provide materials that challenge and develop their growing physical abilities.</p>
+                                <h4><i class="fas fa-users"></i> Social Skills</h4>
+                                <p>Toddlers learn to interact with peers and adults through guided social experiences. Emphasis is placed on sharing, turn-taking, expressing feelings, and developing empathy within a respectful community.</p>
                             </div>
                         </div>
                         
-                        <h3>Montessori Materials</h3>
-                        <p>Our toddler classroom features specially designed Montessori materials:</p>
-                        <div class="materials-grid">
-                            <div class="material-card">
-                                <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Practical Life Materials">
-                                <h4>Practical Life</h4>
-                                <p>Dressing frames, pouring activities, and cleaning tools</p>
+                        <h3>Curriculum Areas</h3>
+                        <div class="program-features">
+                            <div class="feature-card">
+                                <h4><i class="fas fa-brain"></i> Cognitive Skills</h4>
+                                <p>We encourage curiosity and problem-solving through open-ended activities, matching games, puzzles, and simple sequencing. These help children build memory, attention, and early reasoning skills.</p>
                             </div>
-                            <div class="material-card">
-                                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Sensorial Materials">
-                                <h4>Sensorial</h4>
-                                <p>Color tablets, sound boxes, and texture boards</p>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-hand-sparkles"></i> Sensory Skills</h4>
+                                <p>Our sensory-rich environment offers materials that engage all five senses. Toddlers explore textures, sounds, smells, shapes, and colors, laying the foundation for deeper learning and classification.</p>
                             </div>
-                            <div class="material-card">
-                                <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Language Materials">
-                                <h4>Language</h4>
-                                <p>Vocabulary cards, sandpaper letters, and picture books</p>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-comments"></i> Language Skills</h4>
+                                <p>Language development is fostered through stories, songs, naming activities, and conversations. We support vocabulary growth, comprehension, and early expression in a nurturing, language-rich setting.</p>
                             </div>
                         </div>
                         
@@ -969,16 +1316,6 @@
                             <li><strong>11:30-2:00:</strong> Nap/Rest Time</li>
                             <li><strong>2:00-2:30:</strong> Afternoon Snack</li>
                             <li><strong>2:30-3:30:</strong> Group Activities & Dismissal</li>
-                        </ul>
-                        
-                        <h3>Learning Outcomes</h3>
-                        <p>By the end of our toddler program, children typically demonstrate:</p>
-                        <ul>
-                            <li>Increased independence in self-care activities</li>
-                            <li>Expanded vocabulary and communication skills</li>
-                            <li>Improved fine and gross motor coordination</li>
-                            <li>Ability to follow simple instructions</li>
-                            <li>Emerging social skills and grace & courtesy</li>
                         </ul>
                         
                         <div style="text-align: center; margin-top: 3rem;">
@@ -1843,10 +2180,9 @@
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#" onclick="showHomePage(event)">Home</a></li>
-                        <li><a href="#programs" onclick="showProgramsSection(event)">Programs</a></li>
-                        <li><a href="#curriculum" onclick="showCurriculumSection(event)">Curriculum</a></li>
                         <li><a href="#about" onclick="showAboutSection(event)">About Us</a></li>
-                        <li><a href="#contact" onclick="showContactSection(event)">Contact</a></li>
+                        <li><a href="#programs" onclick="showProgramsSection(event)">Programs</a></li>
+                        <li><a href="#tuition" onclick="showTuitionSection(event)">Tuition</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -1866,7 +2202,6 @@
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
@@ -1901,6 +2236,30 @@
             });
         });
         
+        // FAQ Toggle
+        function toggleAnswer(question) {
+            const answer = question.nextElementSibling;
+            const icon = question.querySelector('i');
+            
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            } else {
+                answer.style.display = 'block';
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            }
+        }
+        
+        // Initialize all FAQ answers to be hidden
+        document.addEventListener('DOMContentLoaded', function() {
+            const answers = document.querySelectorAll('.faq-answer');
+            answers.forEach(answer => {
+                answer.style.display = 'none';
+            });
+        });
+        
         // Page Navigation Functions
         function showHomePage(e) {
             e.preventDefault();
@@ -1912,6 +2271,22 @@
                 page.style.display = 'none';
             });
             window.scrollTo(0, 0);
+        }
+        
+        function showAboutSection(e) {
+            e.preventDefault();
+            document.getElementById('home-page').style.display = 'block';
+            document.querySelectorAll('.program-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            document.querySelectorAll('.curriculum-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            const element = document.getElementById('about');
+            window.scrollTo({
+                top: element.offsetTop - 80,
+                behavior: 'smooth'
+            });
         }
         
         function showProgramsSection(e) {
@@ -1946,7 +2321,7 @@
             });
         }
         
-        function showAboutSection(e) {
+        function showTuitionSection(e) {
             e.preventDefault();
             document.getElementById('home-page').style.display = 'block';
             document.querySelectorAll('.program-detail-page').forEach(page => {
@@ -1955,7 +2330,55 @@
             document.querySelectorAll('.curriculum-detail-page').forEach(page => {
                 page.style.display = 'none';
             });
-            const element = document.getElementById('about');
+            const element = document.getElementById('tuition');
+            window.scrollTo({
+                top: element.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+        
+        function showAdmissionsSection(e) {
+            e.preventDefault();
+            document.getElementById('home-page').style.display = 'block';
+            document.querySelectorAll('.program-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            document.querySelectorAll('.curriculum-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            const element = document.getElementById('admissions');
+            window.scrollTo({
+                top: element.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+        
+        function showParentInvolvementSection(e) {
+            e.preventDefault();
+            document.getElementById('home-page').style.display = 'block';
+            document.querySelectorAll('.program-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            document.querySelectorAll('.curriculum-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            const element = document.getElementById('parent-involvement');
+            window.scrollTo({
+                top: element.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+        
+        function showFaqSection(e) {
+            e.preventDefault();
+            document.getElementById('home-page').style.display = 'block';
+            document.querySelectorAll('.program-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            document.querySelectorAll('.curriculum-detail-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            const element = document.getElementById('faq');
             window.scrollTo({
                 top: element.offsetTop - 80,
                 behavior: 'smooth'
