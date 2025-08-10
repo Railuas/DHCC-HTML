@@ -64,3 +64,11 @@ document.querySelectorAll('.faq-item .faq-question').forEach(q=>{
     ans.style.display = ans.style.display==='none' || !ans.style.display ? 'block' : 'none';
   });
 });
+
+// FAQ toggles
+document.querySelectorAll('.faq-item .faq-q').forEach(q=>{
+  q.addEventListener('click', ()=>{
+    const item = q.closest('.faq-item');
+    item.classList.toggle('open');
+  });
+});
