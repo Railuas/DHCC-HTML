@@ -116,6 +116,42 @@ header .container{gap:12px}
 }
 </style>
 
+
+<style>
+/* ===== Mobile overflow & spacing fixes ===== */
+*,
+*::before,
+*::after{box-sizing:border-box}
+html, body{margin:0;padding:0;overflow-x:hidden}
+img, video{max-width:100%;height:auto}
+/* Wrap long words/URLs */
+body{word-break:break-word;overflow-wrap:anywhere}
+/* Ensure containers don't push width */
+.container, header, footer, .hero, .section{max-width:100%;overflow-x:hidden}
+/* Prevent grid/flex items from forcing wide layouts */
+[class*="grid"], [class*="row"], [class*="flex"] > *{min-width:0}
+/* Buttons: remove stray margins and make easy to tap on mobile */
+a.button, .button, .btn, .cta, .apply, button{
+  display:inline-block;
+  vertical-align:middle;
+  max-width:100%;
+  white-space:normal;
+}
+@media (max-width: 640px){
+  a.button, .button, .btn, .cta, .apply, button{
+    display:block;
+    width:100%;
+    margin-left:0!important;
+    margin-right:0!important;
+  }
+  /* Remove phantom right padding on small screens */
+  .container{width:92%!important;padding-left:0!important;padding-right:0!important;margin-left:auto;margin-right:auto}
+  .section > *:not(.container){padding-left:0!important;padding-right:0!important}
+  /* Tighter hero/header */
+  header .container, .hero .container{padding-left:0!important;padding-right:0!important}
+}
+</style>
+
 </head><body>
 <div class="topbar"><div class="container inner">
 <div>📞 <a href="tel:+18697656718">(+1) 869-765-6718</a>   ✉️ <a href="mailto:diligenthandschildcare@gmail.com">diligenthandschildcare@gmail.com</a></div>
@@ -343,6 +379,14 @@ header .container{gap:12px}
 </div>
 </div>
 </div></section>
+
+<section class="section" id="staff">
+  <div class="container">
+    <h2 class="section-title">Our Staff</h2>
+    <div class="staff" id="staffGrid"></div>
+  </div>
+</section>
+
 <footer class="site-footer">
 <div class="container footer-grid">
 <div>
@@ -373,15 +417,7 @@ header .container{gap:12px}
 </div>
 <div style="text-align:center;margin-top:8px;color:#fff;opacity:.9">Powered by <a href="https://launchone.org" style="color:#E6C45D;text-decoration:underline" target="_blank">LaunchOne.org</a></div>
 
-<section class="section" id="staff"><div class="container">
-<h2 class="section-title">Teachers &amp; Staff</h2>
-<div class="staff">
-<div class="card"><div class="avatar"></div><h3>Mrs. Abike</h3><p>Head of School</p></div>
-<div class="card"><div class="avatar"></div><h3>Ms. Miracle</h3><p>Toddler Guide</p></div>
-<div class="card"><div class="avatar"></div><h3>Mr. Joseph</h3><p>Elementary Guide</p></div>
-<div class="card"><div class="avatar"></div><h3>Ms. Collette</h3><p>Music &amp; Movement</p></div>
-</div>
-</div></section>
+
 </footer>
 <div class="sticky-cta"><a href="https://form.jotform.com/250647204519860" rel="noreferrer" target="_blank">Apply Now →</a></div>
 <button id="toTop" title="Back to top">↑</button>
@@ -1174,4 +1210,6 @@ document.addEventListener('DOMContentLoaded', function(){
 </script>
 
 </body></html>
+
+
 
