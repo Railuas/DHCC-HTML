@@ -84,6 +84,38 @@ header .container{gap:12px}
 .button--disabled{pointer-events:none;opacity:.7}
 </style>
 
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<style>
+/* Logos sizing */
+.logo img, img.logo{max-height:48px;width:auto;object-fit:contain}
+.brand-logos img{max-height:40px;width:auto;object-fit:contain}
+</style>
+
+
+<style>
+/* ===== Mobile-first layout polish ===== */
+@media (max-width: 768px){
+  body{font-size:16px;line-height:1.6}
+  header .container, nav .container{padding:10px 16px}
+  .hero{padding:24px 0}
+  .hero h1{font-size:1.75rem;line-height:1.2;margin:0 0 8px}
+  .hero p{font-size:1rem;margin:0 0 12px;max-width:48ch}
+  .section{padding:36px 0}
+  .container{width:92%!important}
+  /* Stats to 2 columns */
+  .stats, .stat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  /* Programs & Staff grids */
+  .programs-grid{display:grid;grid-template-columns:1fr;gap:16px}
+  #staff .staff{display:grid;grid-template-columns:1fr;gap:16px}
+  .staff-card .avatar{width:108px;height:108px}
+  /* Buttons full-width on mobile for easier taps */
+  .button{width:100%;text-align:center}
+  /* Ensure paragraphs don't hug edges even without container */
+  .section > *:not(.container){padding-left:16px;padding-right:16px}
+}
+</style>
+
 </head><body>
 <div class="topbar"><div class="container inner">
 <div>📞 <a href="tel:+18697656718">(+1) 869-765-6718</a>   ✉️ <a href="mailto:diligenthandschildcare@gmail.com">diligenthandschildcare@gmail.com</a></div>
@@ -125,10 +157,10 @@ header .container{gap:12px}
 <section class="section" id="stats"><div class="container">
 <h2 class="section-title">Our Community</h2>
 <div class="stats">
-<div class="stat"><div class="num" data-count="10">0</div><div class="lbl">Years Serving Families</div></div>
-<div class="stat"><div class="num" data-count="18">0</div><div class="lbl">Teachers &amp; Staff</div></div>
-<div class="stat"><div class="num" data-count="12">0</div><div class="lbl">Clubs &amp; Activities</div></div>
-<div class="stat"><div class="num" data-count="5">0</div><div class="lbl">Average Class Ratio</div></div>
+<div class="stat"><div class="num" data-count="6">0</div><div class="lbl">Years Serving Families</div></div>
+<div class="stat"><div class="num" data-count="6">0</div><div class="lbl">Staff Members</div></div>
+<div class="stat"><div class="num" data-count="6">0</div><div class="lbl">Clubs &amp; Activities</div></div>
+<div class="stat"><div class="num" data-count="6">0</div><div class="lbl">Average Class Ratio</div></div>
 </div>
 </div></section>
 
@@ -340,6 +372,7 @@ header .container{gap:12px}
 </div>
 </div>
 <div style="text-align:center;margin-top:8px;color:#fff;opacity:.9">Powered by <a href="https://launchone.org" style="color:#E6C45D;text-decoration:underline" target="_blank">LaunchOne.org</a></div>
+
 <section class="section" id="staff"><div class="container">
 <h2 class="section-title">Teachers &amp; Staff</h2>
 <div class="staff">
@@ -1113,6 +1146,31 @@ document.addEventListener('DOMContentLoaded', function(){
     }, {once:true});
   });
 });
+</script>
+
+
+<script>
+(function(){
+  const STAFF = [
+    { name: "Mrs. Abike",   role: "Director / Lead Guide", photo: "abike.jpg"    },
+    { name: "Ms. Miracle",  role: "Early Childhood Guide", photo: "miracle.jpg"  },
+    { name: "Mr. Joseph",   role: "STEM & PE",             photo: "joseph.jpg"   },
+    { name: "Ms. Collette", role: "Elementary Guide",      photo: "collette.jpg" },
+    { name: "Ms. Aisha",    role: "Assistant Guide",       photo: "aisha.jpg"    },
+    { name: "Mr. David",    role: "Operations",            photo: "david.jpg"    },
+  ];
+  const FALLBACK_IMG = "abike-montessori-logo.jpg";
+  const grid = document.getElementById("staffGrid");
+  if (!grid) return;
+  grid.innerHTML = STAFF.map(p => `
+    <article class="staff-card">
+      <img class="avatar" src="${p.photo}" alt="${p.name}" onerror="this.src='${FALLBACK_IMG}'">
+      <h3>${p.name}</h3>
+      <div class="role">${p.role}</div>
+      <div class="button button--disabled" aria-disabled="true">Our Team</div>
+    </article>
+  `).join("");
+})();
 </script>
 
 </body></html>
