@@ -85,7 +85,7 @@
 <h2 class="section-title">Our Community</h2>
 <div class="stats">
 <div class="stat"><div class="num" data-count="10">0</div><div class="lbl">Years Serving Families</div></div>
-<div class="stat"><div class="num" data-count="18">0</div><div class="lbl">Teachers &amp; Staff</div></div>
+<div class="stat"><div class="num" data-count="6">0</div><div class="lbl">Staff Members</div></div>
 <div class="stat"><div class="num" data-count="12">0</div><div class="lbl">Clubs &amp; Activities</div></div>
 <div class="stat"><div class="num" data-count="5">0</div><div class="lbl">Average Class Ratio</div></div>
 </div>
@@ -1055,5 +1055,56 @@
 <div class="modal-actions"><button class="button" data-close="">Close</button></div>
 </div>
 </div>
-</section></body></html>
+</section>
+<section class="section" id="staff">
+  <div class="container">
+    <h2 class="section-title">Our Staff</h2>
+    <div class="staff" id="staffGrid"></div>
+  </div>
+</section>
+
+
+<style>
+/* --- Staff cards + mobile polish (added) --- */
+#staff .staff{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.staff-card{background:#fff;border:1px solid rgba(15,23,42,.08);border-radius:16px;box-shadow:0 12px 28px rgba(17,12,46,.06);padding:16px;text-align:center}
+.staff-card .avatar{width:128px;height:128px;border-radius:999px;border:3px solid #E6C45D;object-fit:cover;background:#fff}
+.staff-card h3{margin:10px 0 4px;font-size:18px}
+.staff-card .role{color:#475569;font-size:14px;margin-bottom:10px}
+.staff-card .button{display:inline-block;padding:8px 12px;border-radius:12px;border:1px solid #3A2C6E;text-decoration:none;font-weight:600}
+/* mobile */
+@media (max-width: 900px){ #staff .staff{grid-template-columns:repeat(2,minmax(0,1fr));} }
+@media (max-width: 640px){ #staff .staff{grid-template-columns:1fr;} .staff-card .avatar{width:108px;height:108px} }
+/* tighten generic sections on small screens if these classes exist */
+@media (max-width: 640px){
+  .section{padding:42px 0 !important}
+  .container{width:92% !important}
+}
+</style>
+
+<script>
+(function(){
+  const STAFF = [
+    { name: "Mrs. Abike",   role: "Director / Lead Guide", photo: "abike.jpg",    slug: "abike" },
+    { name: "Ms. Miracle",  role: "Early Childhood Guide", photo: "miracle.jpg",  slug: "miracle" },
+    { name: "Mr. Joseph",   role: "STEM & PE",             photo: "joseph.jpg",   slug: "joseph" },
+    { name: "Ms. Collette", role: "Elementary Guide",      photo: "collette.jpg", slug: "collette" },
+    { name: "Ms. Aisha",    role: "Assistant Guide",       photo: "aisha.jpg",    slug: "aisha" },
+    { name: "Mr. David",    role: "Operations",            photo: "david.jpg",    slug: "david" },
+  ];
+  const FALLBACK_IMG = "abike-montessori-logo.jpg";
+  const grid = document.getElementById("staffGrid");
+  if (!grid) return;
+  grid.innerHTML = STAFF.map(p => `
+    <article class="staff-card">
+      <img class="avatar" src="${p.photo}" alt="${p.name}" onerror="this.src='${FALLBACK_IMG}'">
+      <h3>${p.name}</h3>
+      <div class="role">${p.role}</div>
+      <a class="button" href="staff/${p.slug}.html">Show more</a>
+    </article>
+  `).join("");
+})();
+</script>
+
+</body></html>
 
