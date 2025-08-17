@@ -318,6 +318,52 @@ a.cta, .floating-cta, a[href*="apply"], a[href*="enroll"]{z-index:40}
 <meta name="twitter:description" content="Abike Montessori offers Toddler, Pre‑School, Lower & Upper Elementary programs with trained guides and beautiful materials in Basseterre, St. Kitts.">
 <meta name="twitter:image" content="https://abikemontessori.com/abike-montessori-logo.jpg">
 
+  <link rel="stylesheet" href="mobile-fix.css">
+<style>
+/* Staff section polish */
+#staff .staff {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 20px;
+}
+.staff-card {
+  background: #fff;
+  border: 1px solid rgba(15,23,42,.08);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(17,12,46,.08);
+  padding: 20px;
+  text-align: center;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.staff-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(17,12,46,.15);
+}
+.staff-card .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  object-fit: cover;
+  border: 3px solid var(--gold);
+}
+.staff-card h3 {
+  margin: 6px 0 2px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.staff-card .role {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+@media (max-width:1024px) {
+  #staff .staff { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width:640px) {
+  #staff .staff { grid-template-columns: 1fr; }
+  .staff-card .avatar { width: 100px; height: 100px; }
+}
+</style>
 </head><body>
 <div class="topbar"><div class="container inner">
 <div>📞 <a href="tel:+18697656718">(+1) 869-765-6718</a>   ✉️ <a href="mailto:diligenthandschildcare@gmail.com">diligenthandschildcare@gmail.com</a></div>
@@ -416,6 +462,36 @@ a.cta, .floating-cta, a[href*="apply"], a[href*="enroll"]{z-index:40}
     </div>
   </div>
 </section>
+
+<section class="section" id="staff">
+  <div class="container">
+    <h2 class="section-title">Meet Our Team</h2>
+    <p class="section-sub">Guides who nurture independence, confidence, and joy in every child.</p>
+    <div class="staff">
+      <article class="staff-card">
+        <img class="avatar" src="staff-abike.jpg" alt="Mrs. Abike">
+        <h3>Mrs. Abike</h3>
+        <p class="role">Director & Lead Guide</p>
+      </article>
+      <article class="staff-card">
+        <img class="avatar" src="staff-miracle.jpg" alt="Ms. Miracle">
+        <h3>Ms. Miracle</h3>
+        <p class="role">Toddler Guide</p>
+      </article>
+      <article class="staff-card">
+        <img class="avatar" src="staff-joseph.jpg" alt="Mr. Joseph">
+        <h3>Mr. Joseph</h3>
+        <p class="role">Assistant Guide</p>
+      </article>
+      <article class="staff-card">
+        <img class="avatar" src="staff-collette.jpg" alt="Ms. Collette">
+        <h3>Ms. Collette</h3>
+        <p class="role">Arts & Movement</p>
+      </article>
+    </div>
+  </div>
+</section>
+
 
 
 <section class="section lead-centered" id="admissions">
@@ -600,12 +676,7 @@ a.cta, .floating-cta, a[href*="apply"], a[href*="enroll"]{z-index:40}
 
 
 
-<section class="section" id="staff">
-  <div class="container">
-    <h2 class="section-title">Our Staff</h2>
-    <div class="staff" id="staffGrid"></div>
-  </div>
-</section>
+
 
 </footer>
 <div class="sticky-cta"><a href="https://form.jotform.com/250647204519860" rel="noreferrer" target="_blank">Apply Now →</a></div>
@@ -1423,5 +1494,6 @@ document.addEventListener('DOMContentLoaded', function(){
 })();
 </script>
 
+  <script src="mobile-fix.js"></script>
 </body></html>
 
