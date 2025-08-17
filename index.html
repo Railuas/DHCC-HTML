@@ -501,6 +501,38 @@ a.cta, .floating-cta, a[href*="apply"], a[href*="enroll"]{z-index:40}
 .menu-toggle:focus{ outline: 2px solid #fff; outline-offset: 2px }
 
 </style>
+<style>
+
+/* === HERO PURPLE SECTION FIX === */
+/* Make hero a comfy, centered band with good spacing and no weird overlays */
+.hero{
+  display:flex;
+  align-items:center;
+  min-height: 320px;
+  padding: 28px 0;
+  position: relative;
+}
+/* Use content flow instead of absolute center to avoid clipping on phones */
+.hero .hero-caption{
+  position: static !important;
+  left: auto; top: auto; transform:none;
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+@media (max-width: 640px){
+  .hero{ min-height: 260px; padding: 24px 0 }
+  .hero .hero-caption{ text-align: center }
+  .hero .hero-cta{ justify-content: center }
+}
+/* Remove the thin header border line over the purple so it looks cleaner */
+.site-header{
+  border-bottom: none !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
+
+</style>
 </head><body>
 <div class="topbar"><div class="container inner">
 <div>📞 <a href="tel:+18697656718">(+1) 869-765-6718</a>   ✉️ <a href="mailto:diligenthandschildcare@gmail.com">diligenthandschildcare@gmail.com</a></div>
@@ -523,13 +555,12 @@ a.cta, .floating-cta, a[href*="apply"], a[href*="enroll"]{z-index:40}
 </nav>
 <button aria-label="Toggle menu" class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
 </div></header>
-<section class="hero" id="top">
+<section class="hero slider-nophoto" id="top">
 <div class="hero-caption">
 <h1>Love Never Fails</h1><p>Where academic excellence is pursued in a loving environment.</p>
 <div class="hero-cta"><a class="btn btn-primary" href="#programs">Explore Programs</a><a class="btn" href="#events">Upcoming Events</a></div>
 </div>
-
-</div></section>
+</section>
 
 
 <section class="section" id="curriculum">
@@ -881,7 +912,6 @@ a.cta, .floating-cta, a[href*="apply"], a[href*="enroll"]{z-index:40}
 <a class="btn btn-primary" href="#contact" onclick="showContactSection(event)">Schedule a Visit</a>
 </div>
 </div>
-</div>
 </section>
 </div>
 <div class="modal-actions">
@@ -959,7 +989,6 @@ a.cta, .floating-cta, a[href*="apply"], a[href*="enroll"]{z-index:40}
 <p>The third year in our Children's House program is the crucial "kindergarten year" where children synthesize all they've learned in previous years. They emerge as classroom leaders, mentoring younger students while solidifying their academic foundation for elementary school.</p>
 <div style="text-align: center; margin-top: 3rem;">
 <a class="btn btn-primary" href="#contact" onclick="showContactSection(event)">Schedule a Visit</a>
-</div>
 </div>
 </div>
 </section>
@@ -1043,7 +1072,6 @@ a.cta, .floating-cta, a[href*="apply"], a[href*="enroll"]{z-index:40}
 <a class="btn btn-primary" href="#contact" onclick="showContactSection(event)">Schedule a Visit</a>
 </div>
 </div>
-</div>
 </section>
 </div>
 <div class="modal-actions">
@@ -1123,7 +1151,6 @@ a.cta, .floating-cta, a[href*="apply"], a[href*="enroll"]{z-index:40}
 </ul>
 <div style="text-align: center; margin-top: 3rem;">
 <a class="btn btn-primary" href="#contact" onclick="showContactSection(event)">Schedule a Visit</a>
-</div>
 </div>
 </div>
 </section>
@@ -1206,7 +1233,6 @@ a.cta, .floating-cta, a[href*="apply"], a[href*="enroll"]{z-index:40}
 <a class="btn btn-primary" href="#contact" onclick="showContactSection(event)">Learn More About Our Programs</a>
 </div>
 </div>
-</div>
 </section>
 </div>
 <div class="modal-actions"><button class="button" data-close="">Close</button></div>
@@ -1268,7 +1294,6 @@ a.cta, .floating-cta, a[href*="apply"], a[href*="enroll"]{z-index:40}
 </div>
 <div style="text-align: center; margin-top: 3rem;">
 <a class="btn btn-primary" href="#contact" onclick="showContactSection(event)">Learn More About Our Programs</a>
-</div>
 </div>
 </div>
 </section>
@@ -1340,7 +1365,6 @@ a.cta, .floating-cta, a[href*="apply"], a[href*="enroll"]{z-index:40}
 <a class="btn btn-primary" href="#contact" onclick="showContactSection(event)">Learn More About Our Programs</a>
 </div>
 </div>
-</div>
 </section>
 </div>
 <div class="modal-actions"><button class="button" data-close="">Close</button></div>
@@ -1410,7 +1434,6 @@ a.cta, .floating-cta, a[href*="apply"], a[href*="enroll"]{z-index:40}
 </div>
 <div style="text-align: center; margin-top: 3rem;">
 <a class="btn btn-primary" href="#contact" onclick="showContactSection(event)">Learn More About Our Programs</a>
-</div>
 </div>
 </div>
 </section>
@@ -1486,7 +1509,6 @@ a.cta, .floating-cta, a[href*="apply"], a[href*="enroll"]{z-index:40}
 <a class="btn btn-primary" href="#contact" onclick="showContactSection(event)">Learn More About Our Programs</a>
 </div>
 </div>
-</div>
 </section>
 </div>
 <div class="modal-actions"><button class="button" data-close="">Close</button></div>
@@ -1560,7 +1582,6 @@ a.cta, .floating-cta, a[href*="apply"], a[href*="enroll"]{z-index:40}
 </div>
 <div style="text-align: center; margin-top: 3rem;">
 <a class="btn btn-primary" href="#contact" onclick="showContactSection(event)">Learn More About Our Programs</a>
-</div>
 </div>
 </div>
 </section>
